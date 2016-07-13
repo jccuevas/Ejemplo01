@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ejemplo01</string>
+    <string name="main_button_connect">Conectar</string>
+    <string name="main_title">Cliente TCP</string>
+</resources>
