@@ -3,6 +3,7 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
+        <pickBest>false</pickBest>
         <target>android-23</target>
       </config>
     </shared>
@@ -20,10 +21,104 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb38babc-8bd2-4424-9a8f-91d8d00ab68b" name="Default" comment="Añadida la conexión y las clases del ejemplo de Java">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/cliente/Protocolo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values-v11/styles.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sv_ejemplos" afterPath="$PROJECT_DIR$/../sv_ejemplos" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_4_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java" afterPath="$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.classpath" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.gitattributes" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.gitignore" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.project" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/frame.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/frame.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/tween.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/tween.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/botonlista_blanco.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/botonlista_blanco.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/button_disco.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/button_disco.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/clip1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/clip1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/fondoxml1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/fondoxml1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg_hover.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg_hover.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/image_bg.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/image_bg.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/insetcielo.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/insetcielo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/list_selector.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/list_selector.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/menu_list.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/menu_list.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisaje.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisaje.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisajecentrado.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisajecentrado.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/progress_wifipower.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/progress_wifipower.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/scale1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/scale1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_blue.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_blue.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_main.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_white.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_white.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/transition_1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/transition_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/fragmentdynamic_layout.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/fragmentdynamic_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_barra.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_barra.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_connectivity.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_connectivity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_ficheros.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_ficheros.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_connectivity.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_connectivity.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_networking.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_networking.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragmentinfo.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragmentinfo.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragments.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragments.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_graficos.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_graficos.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_help.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_help.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_lista.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_lista.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_menu.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_navigation.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_navigation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_url.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_url.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_web.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_panel.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_panel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/listview_row_wifipower.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/listview_row_wifipower.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cars.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cars.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cursor.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cursor.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_menu.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_menu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/settings.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/context_lista.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/context_lista.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragment_panel.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragment_panel.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragmentos.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragmentos.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_graficos.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_graficos.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/array.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/array.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/strings.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/styles.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/BitmapIds.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/BitmapIds.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/Lienzo.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/Lienzo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Barra.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Barra.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Car.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Car.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Connectivity.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Connectivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Download.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Download.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Ficheros.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Ficheros.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentInfo.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuConnectivity.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuConnectivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuNetworking.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuNetworking.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Fragmentos.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Fragmentos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentosDinamicos.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentosDinamicos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Graficos.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Graficos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Help.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Help.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Lista.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Lista.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Network.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Network.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkNavigationFragment.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkNavigationFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkURLFragment.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkURLFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkWebFragment.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkWebFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NewListAdapter.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NewListAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Panel.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Panel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Record.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Record.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordContentProvider.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordContentProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordTableColumns.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordTableColumns.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordsSQLiteHelper.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordsSQLiteHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/SQLiteTableRecords.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/SQLiteTableRecords.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Settings.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Settings.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/WiFiScanReceiver.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/WiFiScanReceiver.java" />
     </list>
     <ignored path="Ejemplo01.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,32 +141,34 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="5.8846154">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.589011">
+              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7405303">
-              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,7 +178,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -97,7 +194,7 @@
         <option value="Juan Carlos" />
       </list>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1415,7 +1512,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4395950536058" />
+        <entry key="$PROJECT_DIR$" value="4405304753225" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -1597,11 +1694,11 @@
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0-sources.jar" />
                             <option value="$APPLICATION_HOME_DIR$/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar" />
-                            <option value="D:/Android/extras/android/m2repository/com/android/support/appcompat-v7/23.4.0/appcompat-v7-23.4.0.aar" />
-                            <option value="D:/Android/extras/android/m2repository/com/android/support/animated-vector-drawable/23.4.0/animated-vector-drawable-23.4.0.aar" />
-                            <option value="D:/Android/extras/android/m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0.aar" />
-                            <option value="D:/Android/extras/android/m2repository/com/android/support/support-vector-drawable/23.4.0/support-vector-drawable-23.4.0.aar" />
-                            <option value="D:/Android/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar" />
+                            <option value="C:/AndroidSDK/extras/android/m2repository/com/android/support/appcompat-v7/23.4.0/appcompat-v7-23.4.0.aar" />
+                            <option value="C:/AndroidSDK/extras/android/m2repository/com/android/support/animated-vector-drawable/23.4.0/animated-vector-drawable-23.4.0.aar" />
+                            <option value="C:/AndroidSDK/extras/android/m2repository/com/android/support/support-v4/23.4.0/support-v4-23.4.0.aar" />
+                            <option value="C:/AndroidSDK/extras/android/m2repository/com/android/support/support-vector-drawable/23.4.0/support-vector-drawable-23.4.0.aar" />
+                            <option value="C:/AndroidSDK/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar" />
                           </list>
                         </option>
                         <option name="path" value="$PROJECT_DIR$/app" />
@@ -1613,64 +1710,6 @@
               <option name="name" value="app" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/ant-1.9.3.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/ant-launcher-1.9.3.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-base-services-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-base-services-groovy-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-cli-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-core-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-docs-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-launcher-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-messaging-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-model-core-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-model-groovy-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-native-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-open-api-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-resources-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-tooling-api-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-ui-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/gradle-wrapper-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/groovy-all-2.4.4.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-announce-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-antlr-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-build-comparison-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-build-init-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-code-quality-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-dependency-management-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-diagnostics-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-ear-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-ide-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-ide-native-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-ivy-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-jacoco-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-javascript-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-jetty-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-language-groovy-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-language-java-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-language-jvm-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-language-native-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-language-scala-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-maven-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-osgi-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-platform-base-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-platform-jvm-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-platform-native-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-platform-play-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-plugin-development-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-plugin-use-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-plugins-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-publish-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-reporting-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-resources-http-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-resources-s3-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-resources-sftp-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-scala-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-signing-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-sonar-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-test-kit-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-testing-native-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/gradle-tooling-api-builders-2.10.jar" />
-                  <option value="$APPLICATION_HOME_DIR$/gradle/gradle-2.10/lib/plugins/ivy-2.2.0.jar" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
                   <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
@@ -1687,18 +1726,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1725,17 +1764,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ejemplo01" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -1746,14 +1774,25 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ejemplo01" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="device.picker.selection" value="5_1_WVGA_API_23" />
+    <property name="device.picker.selection" value="movil_WVGA_API_23" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -1780,15 +1819,15 @@
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <Hybrid>
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Hybrid>
       <Native>
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
       </Native>
       <Java />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
@@ -1815,15 +1854,15 @@
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <Hybrid>
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Hybrid>
       <Native>
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
       </Native>
       <Java />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
@@ -1992,15 +2031,15 @@
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <Hybrid>
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-      </Hybrid>
       <Native>
         <option name="WORKING_DIR" value="" />
         <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
       </Native>
       <Java />
+      <Hybrid>
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+      </Hybrid>
       <Profilers>
         <option name="GAPID_DISABLE_PCS" value="false" />
       </Profilers>
@@ -2038,37 +2077,37 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49511003" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49266502" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.5122108" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.4877892" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.4922879" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32949308" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49511003" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25321338" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2092,21 +2131,20 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2127,63 +2165,32 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
@@ -2194,19 +2201,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7405303">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="5.8846154">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.589011">
+          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

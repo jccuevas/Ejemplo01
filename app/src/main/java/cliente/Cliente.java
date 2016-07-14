@@ -9,8 +9,9 @@ import java.net.*;
 
 public class Cliente implements Protocolo, Runnable {
 
-	private static Socket mSocket = null;
+	private Socket mSocket = null;
 
+	private String mAddress = null;
 	public void run() {
 		String exit = "";
 		System.out.println("CLIENTE> Bienvenido");

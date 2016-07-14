@@ -17,7 +17,7 @@
         android:layout_alignLeft="@+id/main_connect"
         android:layout_alignStart="@+id/main_connect"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
-        android:id="@+id/textView" />
+        android:id="@+id/main_title" />
 
     <Button
         android:layout_width="wrap_content"
@@ -27,4 +27,13 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="onConnect" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/main_response"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
