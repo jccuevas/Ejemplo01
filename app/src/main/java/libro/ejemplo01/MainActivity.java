@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
@@ -45,8 +46,13 @@ public class MainActivity extends AppCompatActivity {
      * Este método se llamará cuando se toque el botón conectar
      * @param view vista que generó el evento
      */
-    public void onConnect(View view)
-    {
+    public void onConnect(View view) {
+
+        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
+        Conectar conectar = new Conectar();
+        conectar.execute(direccion);
+
+    }
 //        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
 //        Conectar conecta = new Conectar();
 //
@@ -73,29 +79,29 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Socket cliente = new Socket();
-        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
-        String respuesta = null;
-        try {
-            cliente.connect(direccion);
-            Toast.makeText(this,"Conectado",Toast.LENGTH_SHORT).show();
-            BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
-            respuesta = bis.readLine();
-            mResponse.setText(respuesta);
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(this,"Excepción: "+e.getMessage(),Toast.LENGTH_SHORT).show();
-        } finally {
-            if(cliente!=null)
-                try {
-                    cliente.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-        }
-    }
+//        Socket cliente = new Socket();
+//        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
+//        String respuesta = null;
+//        try {
+//            cliente.connect(direccion);
+//            Toast.makeText(this,"Conectado",Toast.LENGTH_SHORT).show();
+//            BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+//            respuesta = bis.readLine();
+//            mResponse.setText(respuesta);
+//
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            Toast.makeText(this,"Excepción: "+e.getMessage(),Toast.LENGTH_SHORT).show();
+//        } finally {
+//            if(cliente!=null)
+//                try {
+//                    cliente.close();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//        }
+//    }
 
 
 
@@ -107,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         String response = "";
         TextView textResponse;
 
-
         @Override
         protected String doInBackground(InetSocketAddress... arg0) {
 
@@ -115,10 +120,21 @@ public class MainActivity extends AppCompatActivity {
             String respuesta=null;
 
             try {
+                //Se crea el socket TCP
                 cliente = new Socket();
+                //Se realiza la conexión al servidor
+                //arg0[0] contiene la dirección IP pasada como parámetro
                 cliente.connect(arg0[0]);
+                //Se leen los datos del buffer de entrada
                 BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                OutputStream os = cliente.getOutputStream();
                 respuesta = bis.readLine();
+                os.write(new String("QUIT\r\n").getBytes());
+                os.flush();
+                respuesta = respuesta +"\r\n"+ bis.readLine();
+                bis.close();
+                os.close();
+                cliente.close();
 
             } catch (UnknownHostException e) {
                 // TODO Auto-generated catch block
@@ -134,13 +150,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String result) {
-
             super.onPostExecute(result);
             mResponse.setText(result);
-
-
-
-
         }
 
     }

@@ -20,105 +20,15 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb38babc-8bd2-4424-9a8f-91d8d00ab68b" name="Default" comment="Añadida la conexión y las clases del ejemplo de Java">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values-v11/styles.xml" afterPath="" />
+    <list default="true" id="fb38babc-8bd2-4424-9a8f-91d8d00ab68b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../sv_ejemplos" afterPath="$PROJECT_DIR$/../sv_ejemplos" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_23_4_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_4_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_23_4_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java" afterPath="$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.classpath" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.gitattributes" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.gitattributes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.gitignore" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.project" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/frame.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/frame.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/tween.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/anim/tween.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/botonlista_blanco.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/botonlista_blanco.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/button_disco.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/button_disco.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/clip1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/clip1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/fondoxml1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/fondoxml1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg_hover.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/gradient_bg_hover.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/image_bg.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/image_bg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/insetcielo.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/insetcielo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/list_selector.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/list_selector.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/menu_list.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/menu_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisaje.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisaje.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisajecentrado.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/paisajecentrado.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/progress_wifipower.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/progress_wifipower.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/scale1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/scale1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_blue.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_blue.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_main.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_white.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/shape_white.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/transition_1.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/drawable/transition_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/fragmentdynamic_layout.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/fragmentdynamic_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_barra.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_barra.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_connectivity.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_connectivity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_ficheros.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_ficheros.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_connectivity.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_connectivity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_networking.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragment_menu_networking.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragmentinfo.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragmentinfo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragments.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_fragments.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_graficos.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_graficos.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_help.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_help.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_lista.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_lista.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_menu.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_navigation.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_navigation.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_url.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_url.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_web.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_network_web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_panel.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/layout_panel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/listview_row_wifipower.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/listview_row_wifipower.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cars.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cars.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cursor.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_cursor.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_menu.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/lisview_row_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/settings.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/layout/settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/context_lista.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/context_lista.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragment_panel.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragment_panel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragmentos.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_fragmentos.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_graficos.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/menu/menu_graficos.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/array.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/array.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/strings.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/styles.xml" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/BitmapIds.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/BitmapIds.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/Lienzo.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/graphics/Lienzo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Barra.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Barra.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Car.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Car.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Connectivity.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Connectivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Download.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Download.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Ficheros.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Ficheros.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentInfo.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuConnectivity.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuConnectivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuNetworking.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentMenuNetworking.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Fragmentos.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Fragmentos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentosDinamicos.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/FragmentosDinamicos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Graficos.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Graficos.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Help.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Help.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Lista.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Lista.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Network.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Network.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkNavigationFragment.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkNavigationFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkURLFragment.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkURLFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkWebFragment.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NetworkWebFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NewListAdapter.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/NewListAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Panel.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Panel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Record.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Record.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordContentProvider.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordContentProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordTableColumns.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordTableColumns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordsSQLiteHelper.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/RecordsSQLiteHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/SQLiteTableRecords.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/SQLiteTableRecords.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Settings.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/WiFiScanReceiver.java" afterPath="$PROJECT_DIR$/../com.example.menu.Menus/src/com/example/menu/WiFiScanReceiver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="Ejemplo01.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -145,7 +55,7 @@
             <state />
           </provider>
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.8846154">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -155,8 +65,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.589011">
-              <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.74285716">
+              <caret line="156" column="5" selection-start-line="108" selection-start-column="3" selection-end-line="156" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,7 +77,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
@@ -179,7 +89,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,9 +101,9 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Juan Carlos" />
         <option value="jccu" />
         <option value="jccuevas@ujaen.es" />
-        <option value="Juan Carlos" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -2074,6 +1986,13 @@
       <option name="number" value="Default" />
       <updated>1465316844399</updated>
     </task>
+    <task id="LOCAL-00001" summary="Ejemplo erróneo Sockets&#10;Ejemplo erróneo HTTP&#10;Tarea Asíncrona">
+      <created>1468517800505</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1468517800505</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2082,14 +2001,13 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49511003" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.5122108" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.4877892" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.51735216" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.4826478" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.49755502" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.4922879" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.48971722" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2098,15 +2016,16 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25321338" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2123,7 +2042,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Añadida la conexión y las clases del ejemplo de Java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadida la conexión y las clases del ejemplo de Java" />
+    <MESSAGE value="Ejemplo erróneo Sockets&#10;Ejemplo erróneo HTTP&#10;Tarea Asíncrona" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejemplo erróneo Sockets&#10;Ejemplo erróneo HTTP&#10;Tarea Asíncrona" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2131,7 +2051,10 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
@@ -2141,7 +2064,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2151,112 +2074,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
@@ -2266,7 +2083,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2275,7 +2130,7 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.8846154">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -2283,8 +2138,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.589011">
-          <caret line="83" column="8" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/cliente/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74285716">
+          <caret line="156" column="5" selection-start-line="108" selection-start-column="3" selection-end-line="156" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
