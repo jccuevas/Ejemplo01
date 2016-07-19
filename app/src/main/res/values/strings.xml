@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Ejemplo01</string>
     <string name="main_button_connect">Conectar</string>
+    <string name="main_button_disconnect">Desconectar</string>
+    <string name="main_disconnected"><i>Desconectado</i></string>
     <string name="main_title">Cliente TCP</string>
     <string name="main_server_response">-respuesta del servidor-</string>
+    <string name="main_button_send">Enviar</string>
 </resources>

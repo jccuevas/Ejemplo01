@@ -3,26 +3,16 @@ package libro.ejemplo01;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
 import java.net.InetSocketAddress;
-import java.net.MalformedURLException;
 import java.net.Socket;
-import java.net.SocketAddress;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.Socket;
-import java.net.URL;
 import java.net.UnknownHostException;
 import android.os.AsyncTask;
+import android.widget.Button;
 import android.widget.TextView;
 
 import cliente.Cliente;
@@ -34,12 +24,39 @@ public class MainActivity extends AppCompatActivity {
     private String ip="192.168.1.130";
     private int puerto=6000;
     TextView    mResponse=null;
+    Button mBotonConectar =null;
+    Button mBotonEnviar =null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mResponse= (TextView)findViewById(R.id.main_response);
+        mBotonConectar = (Button)findViewById(R.id.main_connect);
+        mBotonEnviar = (Button)findViewById(R.id.main_send);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        actualizaInterfaz();
+
+    }
+
+    private void actualizaInterfaz()
+    {
+        if(mSocket!=null) {
+            if (!mSocket.isClosed()) {
+                mBotonConectar.setText(getString(R.string.main_button_disconnect));
+                mBotonEnviar.setVisibility(View.VISIBLE);
+            } else {
+                mBotonConectar.setText(getString(R.string.main_button_connect));
+                mBotonEnviar.setVisibility(View.INVISIBLE);
+            }
+        }else {
+            mBotonConectar.setText(getString(R.string.main_button_connect));
+            mBotonEnviar.setVisibility(View.INVISIBLE);
+        }
     }
 
     /**
@@ -49,8 +66,28 @@ public class MainActivity extends AppCompatActivity {
     public void onConnect(View view) {
 
         InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
-        Conectar conectar = new Conectar();
-        conectar.execute(direccion);
+        if(mSocket!=null) {
+            if (mSocket.isConnected())
+                try {
+                    mSocket.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    actualizaInterfaz();
+                    mResponse.setText(getString(R.string.main_disconnected));
+                    mSocket=null;
+                }
+        }else {
+            CreaSocket conectar = new CreaSocket();
+            conectar.execute(direccion);
+        }
+    }
+
+    public void onSend(View view) {
+
+        Autenticar enviar = new Autenticar();
+        enviar.execute(mSocket);
 
     }
 //        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
@@ -108,16 +145,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class Conectar extends AsyncTask<InetSocketAddress, Void, String> {
 
-        String dstAddress;
-        int dstPort;
-        String response = "";
-        TextView textResponse;
-
         @Override
         protected String doInBackground(InetSocketAddress... arg0) {
 
-            Socket cliente = null;
-            String respuesta=null;
+            Socket cliente;
+            String respuesta="";
 
             try {
                 //Se crea el socket TCP
@@ -136,12 +168,11 @@ public class MainActivity extends AppCompatActivity {
                 os.close();
                 cliente.close();
 
+
             } catch (UnknownHostException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
                 respuesta = "UnknownHostException: " + e.toString();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
                 respuesta = "IOException: " + e.toString();
             }
@@ -152,6 +183,103 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
             mResponse.setText(result);
+            actualizaInterfaz();
+        }
+
+    }
+
+    public class CreaSocket extends AsyncTask<InetSocketAddress, Void, Socket> {
+
+        private String mRespuesta=null;
+
+        @Override
+        protected Socket doInBackground(InetSocketAddress... arg0) {
+
+            Socket cliente;
+
+            try {
+                //Se crea el socket TCP
+                cliente = new Socket();
+                //Se realiza la conexión al servidor
+                //arg0[0] contiene la dirección IP pasada como parámetro
+                cliente.connect(arg0[0]);
+                //Se lee la respuesta del servidor
+                BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                mRespuesta = bis.readLine();
+            } catch (IOException e) {
+                mRespuesta=e.getMessage();
+                cliente=null;
+                e.printStackTrace();
+            }
+            return cliente;
+        }
+
+        @Override
+        protected void onPostExecute(Socket result) {
+            super.onPostExecute(result);
+            mResponse.setText(mRespuesta);
+            mSocket=result;
+            actualizaInterfaz();
+//            if(mSocket!=null){
+//                if(!mSocket.isClosed()){
+//                    mBotonConectar.setText(getString(R.string.main_button_disconnect));
+//                }else{
+//                    mBotonConectar.setText(getString(R.string.main_button_connect));
+//                }
+//            }else{
+//                mBotonConectar.setText(getString(R.string.main_button_connect));
+//            }
+        }
+
+    }
+
+    public class Autenticar extends AsyncTask<Socket, Void, Socket> {
+
+        private String mRespuesta="";
+
+        @Override
+        protected Socket doInBackground(Socket... arg0) {
+
+            Socket cliente=arg0[0];
+
+            if(cliente!=null) {
+                if(cliente.isConnected()) {
+                    try {
+                        BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                        OutputStream os = cliente.getOutputStream();
+
+                        os.write(new String("USER USER\r\n").getBytes());
+                        os.flush();
+                        mRespuesta = bis.readLine();
+                        os.write(new String("PASS 12345\r\n").getBytes());
+                        os.flush();
+                        mRespuesta = bis.readLine();
+                        if(mRespuesta!=null) {
+                            if (mRespuesta.startsWith("OK"))
+                                mRespuesta = "Autenticado correctamente";
+                            else {
+                                mRespuesta = "Error de autenticación";
+                            }
+                        }
+                    } catch (IOException e) {
+                        mRespuesta=e.getMessage();
+                        e.printStackTrace();
+                    }
+                } else {
+                    mRespuesta="No está conectado";
+                }
+            }else {
+                mRespuesta = "No está conectado";
+            }
+            return cliente;
+        }
+
+        @Override
+        protected void onPostExecute(Socket result) {
+            super.onPostExecute(result);
+            mResponse.setText(mRespuesta);
+            mSocket=result;
+            actualizaInterfaz();
         }
 
     }
