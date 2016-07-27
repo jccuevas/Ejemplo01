@@ -32,8 +32,11 @@
         android:text="@string/main_button_send"
         android:id="@+id/main_send"
         android:layout_below="@+id/main_connect"
-        android:layout_centerHorizontal="true"
-        android:onClick="onSend" />
+        android:onClick="onSend"
+        android:layout_alignRight="@+id/main_connect"
+        android:layout_alignEnd="@+id/main_connect"
+        android:layout_alignLeft="@+id/main_connect"
+        android:layout_alignStart="@+id/main_connect" />
 
     <TextView
         android:layout_width="match_parent"
@@ -48,4 +51,36 @@
         android:background="#FFDDDDDD"
         android:padding="10dp"
         android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_nombre"
+        android:hint="@string/main_hint_nombre"
+        android:layout_below="@+id/main_title"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:singleLine="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_clave"
+        android:layout_below="@+id/edit_nombre"
+        android:hint="@string/main_hint_clave"
+        android:layout_alignLeft="@+id/edit_nombre"
+        android:layout_alignStart="@+id/edit_nombre"
+        android:layout_alignRight="@+id/edit_nombre"
+        android:layout_alignEnd="@+id/edit_nombre"
+        android:inputType="textPassword"
+        android:password="false"
+        android:singleLine="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_nuevo_usuario"
+        android:id="@+id/button2"
+        android:layout_below="@+id/edit_clave"
+        android:layout_centerHorizontal="true"
+        android:onClick="nuevoUsuario" />
 </RelativeLayout>
