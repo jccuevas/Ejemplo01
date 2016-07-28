@@ -1,6 +1,7 @@
 package libro.ejemplo01;
 
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,18 +23,19 @@ import cliente.Cliente;
 
 public class MainActivity extends AppCompatActivity {
 
-    protected Cliente mCliente;
-    private Socket mSocket=null;
-    private String ip="192.168.1.130";
-    private int puerto=6000;
-    TextView    mResponse=null;
-    Button mBotonConectar =null;
-    Button mBotonEnviar =null;
-
     public static final String EXTRA_NOMBRE="nombre";
     public static final String EXTRA_CLAVE="clave";
     public static final String EXTRA_SESION="sesion";
-
+    public static final String ESTADO_CONECTADO="estado_conectado";
+    public static final String ESTADO_IP="estado_ip";
+    public static final String ESTADO_PUERTO="estado_puerto";
+    protected Cliente mCliente;
+    TextView    mResponse=null;
+    Button mBotonConectar =null;
+    Button mBotonEnviar =null;
+    private Socket mSocket=null;
+    private String mIp="192.168.1.130";
+    private int mPuerto=6000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,41 @@ public class MainActivity extends AppCompatActivity {
         mResponse= (TextView)findViewById(R.id.main_response);
         mBotonConectar = (Button)findViewById(R.id.main_connect);
         mBotonEnviar = (Button)findViewById(R.id.main_send);
+
+        if(savedInstanceState!=null)
+        {
+            boolean conectado = savedInstanceState.getBoolean(ESTADO_CONECTADO);
+
+            if(conectado){
+                //Como se guardó que el socket estaba conectado
+                //se recupera la ip y el puerto y se vuelve a establecer
+                //la conexión
+                mIp= savedInstanceState.getString(ESTADO_IP);
+                mPuerto = savedInstanceState.getInt(ESTADO_PUERTO);
+                InetSocketAddress direccion = new InetSocketAddress(mIp,mPuerto);
+                CreaSocket conectar = new CreaSocket();
+                conectar.execute(direccion);
+            }
+        }
+    }
+
+
+
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+
+        if(mSocket!=null) {
+            if (!mSocket.isClosed()) {
+                //La conexión sigue activa
+                outState.putBoolean(ESTADO_CONECTADO, false);
+                outState.putString(ESTADO_IP, mSocket.getInetAddress().toString());
+                outState.putInt(ESTADO_PUERTO, mSocket.getPort());
+
+            } else
+                outState.putBoolean(ESTADO_CONECTADO, false);
+        } else
+            outState.putBoolean(ESTADO_CONECTADO,false);
     }
 
     @Override
@@ -74,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void onConnect(View view) {
 
-        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
+        InetSocketAddress direccion = new InetSocketAddress(mIp,mPuerto);
         if(mSocket!=null) {
             if (mSocket.isConnected())
                 try {
@@ -120,6 +157,11 @@ public class MainActivity extends AppCompatActivity {
                 String sesion=data.getStringExtra(MainActivity.EXTRA_SESION);
                 Toast.makeText(this,"Nueva sesión: "+sesion, Toast.LENGTH_LONG).show();
             }
+            if(resultCode==RESULT_CANCELED)
+            {
+                Toast.makeText(this,"Operación cancelada", Toast.LENGTH_LONG).show();
+            }
+
     }
 
     //        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
@@ -315,4 +357,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }

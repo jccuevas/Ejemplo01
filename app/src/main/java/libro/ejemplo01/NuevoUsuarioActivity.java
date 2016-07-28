@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -11,6 +12,8 @@ import org.w3c.dom.Text;
 import java.util.Random;
 
 public class NuevoUsuarioActivity extends AppCompatActivity {
+
+    Usuario usuario = new Usuario("");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity {
         String clave  = intent.getStringExtra(MainActivity.EXTRA_CLAVE);
 
         TextView saludo = (TextView)findViewById(R.id.nuevo_usuario_saludo);
-        saludo.setText("Bienvenido "+nombre+" clave="+clave);
+        saludo.setText("Bienvenido "+nombre+" clave="+clave+" Nombre guardado="+usuario.getNombre());
 
     }
 
@@ -35,4 +38,38 @@ public class NuevoUsuarioActivity extends AppCompatActivity {
         finish();
 
     }
+
+    public void onSave(View view){
+
+        EditText nombre = (EditText)findViewById(R.id.nuevo_usuario_nombre);
+        usuario.setNombre(nombre.getEditableText().toString());
+        TextView saludo = (TextView)findViewById(R.id.nuevo_usuario_saludo);
+        saludo.setText("Nombre guardado="+usuario.getNombre());
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+
+    }
+
+    public class Usuario{
+        private String mNombre="";
+
+        Usuario(String nombre){
+            mNombre=nombre;
+        }
+
+        public String getNombre(){
+            return mNombre;
+        }
+
+        public void setNombre(String nombre){
+            mNombre=nombre;
+        }
+    }
+
+
 }
