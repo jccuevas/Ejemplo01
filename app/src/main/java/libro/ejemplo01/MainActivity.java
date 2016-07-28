@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
 
         if(mSocket!=null) {
             if (!mSocket.isClosed()) {
                 //La conexión sigue activa
-                outState.putBoolean(ESTADO_CONECTADO, false);
+                outState.putBoolean(ESTADO_CONECTADO, true);
                 outState.putString(ESTADO_IP, mSocket.getInetAddress().toString());
                 outState.putInt(ESTADO_PUERTO, mSocket.getPort());
 
@@ -79,6 +79,18 @@ public class MainActivity extends AppCompatActivity {
                 outState.putBoolean(ESTADO_CONECTADO, false);
         } else
             outState.putBoolean(ESTADO_CONECTADO,false);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(mSocket!=null)
+            if(!mSocket.isClosed())
+                try {
+                    mSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
     }
 
     @Override

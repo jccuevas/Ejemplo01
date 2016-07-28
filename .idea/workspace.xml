@@ -20,13 +20,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb38babc-8bd2-4424-9a8f-91d8d00ab68b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/utilidades/Ecuacion2Grado.java" />
+    <list default="true" id="fb38babc-8bd2-4424-9a8f-91d8d00ab68b" name="Default" comment="Crear una nueva actividad.&#10;-Clase Ecuacion2Grado&#10;-Guardar estado para recuperar conexión Socket">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/NuevoUsuarioActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/NuevoUsuarioActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_usuario.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_nuevo_usuario.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="Ejemplo01.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,14 +85,14 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33186814">
-              <caret line="116" column="66" selection-start-line="116" selection-start-column="66" selection-end-line="116" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.46401986">
+              <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3166#3208#0" expanded="true" />
-                <element signature="e#3329#3368#0" expanded="true" />
-                <element signature="e#3496#3535#0" expanded="true" />
-                <element signature="e#4168#4205#0" expanded="true" />
+                <element signature="e#3401#3443#0" expanded="true" />
+                <element signature="e#3564#3603#0" expanded="true" />
+                <element signature="e#3731#3770#0" expanded="true" />
+                <element signature="e#4403#4440#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,14 +102,9 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/NuevoUsuarioActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#629#630#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
+                <marker date="1469728308531" expanded="true" signature="1609:1881" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -144,7 +135,9 @@
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="3.9230769">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#826#859#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2078,7 +2071,13 @@
       <option name="project" value="LOCAL" />
       <updated>1469635813245</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Crear una nueva actividad.&#10;-Clase Ecuacion2Grado&#10;-Guardar estado para recuperar conexión Socket">
+      <created>1469728313122</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1469728313122</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2091,7 +2090,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.51992285" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32729805" sideWeight="0.48007712" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.48007712" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.49485862" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32729805" sideWeight="0.48971722" order="2" side_tool="false" content_ui="tabs" />
@@ -2105,7 +2104,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39972144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2132,7 +2131,9 @@
     <MESSAGE value="Tarea Asíncrona con conexión socket" />
     <MESSAGE value="Tareas de conexión y autenticación&#10;- La interfaz responde a los cambios de estado de la conexión" />
     <MESSAGE value="Crear una nueva actividad.&#10;-Actividad NuevoUsuarioActivity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crear una nueva actividad.&#10;-Actividad NuevoUsuarioActivity" />
+    <MESSAGE value="Crear una nueva actividad.&#10;-Clase Ecuacion2Grado&#10;-Guardar estado para recuperar conexión Socket" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crear una nueva actividad.&#10;-Clase Ecuacion2Grado&#10;-Guardar estado para recuperar conexión Socket" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2143,8 +2144,20 @@
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="4" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2178,10 +2191,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3166#3208#0" expanded="true" />
-            <element signature="e#3329#3368#0" expanded="true" />
-            <element signature="e#3496#3535#0" expanded="true" />
-            <element signature="e#4168#4205#0" expanded="true" />
+            <element signature="e#3401#3443#0" expanded="true" />
+            <element signature="e#3564#3603#0" expanded="true" />
+            <element signature="e#3731#3770#0" expanded="true" />
+            <element signature="e#4403#4440#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2230,10 +2243,10 @@
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3166#3208#0" expanded="true" />
-            <element signature="e#3329#3368#0" expanded="true" />
-            <element signature="e#3496#3535#0" expanded="true" />
-            <element signature="e#4168#4205#0" expanded="true" />
+            <element signature="e#3401#3443#0" expanded="true" />
+            <element signature="e#3564#3603#0" expanded="true" />
+            <element signature="e#3731#3770#0" expanded="true" />
+            <element signature="e#4403#4440#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2285,10 +2298,10 @@
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3166#3208#0" expanded="true" />
-            <element signature="e#3329#3368#0" expanded="true" />
-            <element signature="e#3496#3535#0" expanded="true" />
-            <element signature="e#4168#4205#0" expanded="true" />
+            <element signature="e#3401#3443#0" expanded="true" />
+            <element signature="e#3564#3603#0" expanded="true" />
+            <element signature="e#3731#3770#0" expanded="true" />
+            <element signature="e#4403#4440#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2340,10 +2353,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3166#3208#0" expanded="true" />
-            <element signature="e#3329#3368#0" expanded="true" />
-            <element signature="e#3496#3535#0" expanded="true" />
-            <element signature="e#4168#4205#0" expanded="true" />
+            <element signature="e#3401#3443#0" expanded="true" />
+            <element signature="e#3564#3603#0" expanded="true" />
+            <element signature="e#3731#3770#0" expanded="true" />
+            <element signature="e#4403#4440#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2377,10 +2390,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3166#3208#0" expanded="true" />
-            <element signature="e#3329#3368#0" expanded="true" />
-            <element signature="e#3496#3535#0" expanded="true" />
-            <element signature="e#4168#4205#0" expanded="true" />
+            <element signature="e#3401#3443#0" expanded="true" />
+            <element signature="e#3564#3603#0" expanded="true" />
+            <element signature="e#3731#3770#0" expanded="true" />
+            <element signature="e#4403#4440#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2441,7 +2454,9 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#826#859#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2475,21 +2490,18 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.9230769">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#826#859#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/NuevoUsuarioActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
+            <marker date="1469728308531" expanded="true" signature="1609:1881" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -2511,14 +2523,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/libro/ejemplo01/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33186814">
-          <caret line="116" column="66" selection-start-line="116" selection-start-column="66" selection-end-line="116" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.46401986">
+          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3166#3208#0" expanded="true" />
-            <element signature="e#3329#3368#0" expanded="true" />
-            <element signature="e#3496#3535#0" expanded="true" />
-            <element signature="e#4168#4205#0" expanded="true" />
+            <element signature="e#3401#3443#0" expanded="true" />
+            <element signature="e#3564#3603#0" expanded="true" />
+            <element signature="e#3731#3770#0" expanded="true" />
+            <element signature="e#4403#4440#0" expanded="true" />
           </folding>
         </state>
       </provider>
