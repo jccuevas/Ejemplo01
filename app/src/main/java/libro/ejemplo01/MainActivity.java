@@ -1,6 +1,10 @@
 package libro.ejemplo01;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,62 +17,94 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
+
 import android.os.AsyncTask;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 import cliente.Cliente;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_NOMBRE="nombre";
-    public static final String EXTRA_CLAVE="clave";
-    public static final String EXTRA_SESION="sesion";
-    public static final String ESTADO_CONECTADO="estado_conectado";
-    public static final String ESTADO_IP="estado_ip";
-    public static final String ESTADO_PUERTO="estado_puerto";
+    public static final String EXTRA_NOMBRE = "nombre";
+    public static final String EXTRA_CLAVE = "clave";
+    public static final String EXTRA_SESION = "sesion";
+    public static final String ESTADO_CONECTADO = "estado_conectado";
+    public static final String ESTADO_IP = "estado_ip";
+    public static final String ESTADO_PUERTO = "estado_puerto";
+    private static Handler mHandler = null;
     protected Cliente mCliente;
-    TextView    mResponse=null;
-    Button mBotonConectar =null;
-    Button mBotonEnviar =null;
-    private Socket mSocket=null;
-    private String mIp="192.168.1.130";
-    private int mPuerto=6000;
+    TextView mResponse = null;
+    Button mBotonConectar = null;
+    Button mBotonEnviar = null;
+    private Socket mSocket = null;
+    private String mIp = "192.168.1.159";
+    private int mPuerto = 6000;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mResponse= (TextView)findViewById(R.id.main_response);
-        mBotonConectar = (Button)findViewById(R.id.main_connect);
-        mBotonEnviar = (Button)findViewById(R.id.main_send);
+        mResponse = (TextView) findViewById(R.id.main_response);
+        mBotonConectar = (Button) findViewById(R.id.main_connect);
+        mBotonEnviar = (Button) findViewById(R.id.main_send);
 
-        if(savedInstanceState!=null)
-        {
-            boolean conectado = savedInstanceState.getBoolean(ESTADO_CONECTADO);
+//        if (savedInstanceState != null) {
+//            boolean conectado = savedInstanceState.getBoolean(ESTADO_CONECTADO);
+//
+//            if (conectado) {
+//                //Como se guardó que el socket estaba conectado
+//                //se recupera la ip y el puerto y se vuelve a establecer
+//                //la conexión
+//                mIp = savedInstanceState.getString(ESTADO_IP);
+//                mPuerto = savedInstanceState.getInt(ESTADO_PUERTO);
+//                InetSocketAddress direccion = new InetSocketAddress(mIp.substring(1), mPuerto);
+//                CreaSocket conectar = new CreaSocket();
+//                conectar.execute(direccion);
+//            }
+//        }
 
-            if(conectado){
-                //Como se guardó que el socket estaba conectado
-                //se recupera la ip y el puerto y se vuelve a establecer
-                //la conexión
-                mIp= savedInstanceState.getString(ESTADO_IP);
-                mPuerto = savedInstanceState.getInt(ESTADO_PUERTO);
-                InetSocketAddress direccion = new InetSocketAddress(mIp,mPuerto);
-                CreaSocket conectar = new CreaSocket();
-                conectar.execute(direccion);
+        mHandler = new Handler() {
+            @Override
+            public void handleMessage(Message inputMessage) {
+                // Gets the image task from the incoming Message object.
+
+                switch (inputMessage.what) {
+                    case 1:
+
+                        if (mResponse != null) {
+                            String respuesta = inputMessage.getData().getString("response");
+                            mResponse.setText(respuesta);
+                        }
+                        break;
+                }
+
             }
-        }
-    }
 
+        };
+        actualizaInterfaz();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+    }
 
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        if(mSocket!=null) {
+        if (mSocket != null) {
             if (!mSocket.isClosed()) {
                 //La conexión sigue activa
                 outState.putBoolean(ESTADO_CONECTADO, true);
@@ -78,32 +114,51 @@ public class MainActivity extends AppCompatActivity {
             } else
                 outState.putBoolean(ESTADO_CONECTADO, false);
         } else
-            outState.putBoolean(ESTADO_CONECTADO,false);
+            outState.putBoolean(ESTADO_CONECTADO, false);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        if(mSocket!=null)
-            if(!mSocket.isClosed())
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://libro.ejemplo01/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        if (mSocket != null)
+            if (!mSocket.isClosed())
                 try {
                     mSocket.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.disconnect();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        actualizaInterfaz();
 
     }
 
-    private void actualizaInterfaz()
-    {
-        if(mSocket!=null) {
+    private void actualizaInterfaz() {
+        if (mSocket != null) {
             if (!mSocket.isClosed()) {
                 mBotonConectar.setText(getString(R.string.main_button_disconnect));
                 mBotonEnviar.setVisibility(View.VISIBLE);
@@ -111,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                 mBotonConectar.setText(getString(R.string.main_button_connect));
                 mBotonEnviar.setVisibility(View.INVISIBLE);
             }
-        }else {
+        } else {
             mBotonConectar.setText(getString(R.string.main_button_connect));
             mBotonEnviar.setVisibility(View.INVISIBLE);
         }
@@ -119,28 +174,37 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Este método se llamará cuando se toque el botón conectar
+     *
      * @param view vista que generó el evento
      */
+//    public void onConnect(View view) {
+//
+//        InetSocketAddress direccion = new InetSocketAddress(mIp,mPuerto);
+//        if(mSocket!=null) {
+//            if (mSocket.isConnected())
+//                try {
+//                    mSocket.close();
+//
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                } finally {
+//                    actualizaInterfaz();
+//                    mResponse.setText(getString(R.string.main_disconnected));
+//                    mSocket=null;
+//                }
+//        }else {
+//            CreaSocket conectar = new CreaSocket();
+//            conectar.execute(direccion);
+//        }
+//    }
+
+    //Versión con hebras
     public void onConnect(View view) {
 
-        InetSocketAddress direccion = new InetSocketAddress(mIp,mPuerto);
-        if(mSocket!=null) {
-            if (mSocket.isConnected())
-                try {
-                    mSocket.close();
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-                    actualizaInterfaz();
-                    mResponse.setText(getString(R.string.main_disconnected));
-                    mSocket=null;
-                }
-        }else {
-            CreaSocket conectar = new CreaSocket();
-            conectar.execute(direccion);
-        }
+        InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
+        new Thread(new HebraConectar(direccion)).start();
     }
+
 
     public void onSend(View view) {
 
@@ -154,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
         EditText campo_nombre = (EditText) findViewById(R.id.edit_nombre);
         EditText campo_clave = (EditText) findViewById(R.id.edit_clave);
         String nombre = campo_nombre.getText().toString();
-        String clave  = campo_clave.getText().toString();
+        String clave = campo_clave.getText().toString();
         intent.putExtra(EXTRA_NOMBRE, nombre);
         intent.putExtra(EXTRA_CLAVE, clave);
         startActivityForResult(intent, 1);
@@ -163,17 +227,35 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==1)//Actividad NuevoUsuarioActivity
-            if(resultCode==RESULT_OK)
-            {
-                String sesion=data.getStringExtra(MainActivity.EXTRA_SESION);
-                Toast.makeText(this,"Nueva sesión: "+sesion, Toast.LENGTH_LONG).show();
+        if (requestCode == 1)//Actividad NuevoUsuarioActivity
+            if (resultCode == RESULT_OK) {
+                String sesion = data.getStringExtra(MainActivity.EXTRA_SESION);
+                Toast.makeText(this, "Nueva sesión: " + sesion, Toast.LENGTH_LONG).show();
             }
-            if(resultCode==RESULT_CANCELED)
-            {
-                Toast.makeText(this,"Operación cancelada", Toast.LENGTH_LONG).show();
-            }
+        if (resultCode == RESULT_CANCELED) {
+            Toast.makeText(this, "Operación cancelada", Toast.LENGTH_LONG).show();
+        }
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "Main Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app URL is correct.
+                Uri.parse("android-app://libro.ejemplo01/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
     }
 
     //        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
@@ -197,9 +279,6 @@ public class MainActivity extends AppCompatActivity {
 //            e.printStackTrace();
 //            Toast.makeText(this,"Excepción: "+e.getMessage(),Toast.LENGTH_SHORT).show();
 //        }
-
-
-
 
 
 //        Socket cliente = new Socket();
@@ -227,15 +306,13 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
 
-
-
     public class Conectar extends AsyncTask<InetSocketAddress, Void, String> {
 
         @Override
         protected String doInBackground(InetSocketAddress... arg0) {
 
             Socket cliente;
-            String respuesta="";
+            String respuesta = "";
 
             try {
                 //Se crea el socket TCP
@@ -249,7 +326,7 @@ public class MainActivity extends AppCompatActivity {
                 respuesta = bis.readLine();
                 os.write(new String("QUIT\r\n").getBytes());
                 os.flush();
-                respuesta = respuesta +"\r\n"+ bis.readLine();
+                respuesta = respuesta + "\r\n" + bis.readLine();
                 bis.close();
                 os.close();
                 cliente.close();
@@ -274,9 +351,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public class CreaSocket extends AsyncTask<InetSocketAddress, Void, Socket> {
 
-        private String mRespuesta=null;
+        private String mRespuesta = null;
 
         @Override
         protected Socket doInBackground(InetSocketAddress... arg0) {
@@ -293,8 +371,8 @@ public class MainActivity extends AppCompatActivity {
                 BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
                 mRespuesta = bis.readLine();
             } catch (IOException e) {
-                mRespuesta=e.getMessage();
-                cliente=null;
+                mRespuesta = e.getMessage();
+                cliente = null;
                 e.printStackTrace();
             }
             return cliente;
@@ -304,7 +382,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Socket result) {
             super.onPostExecute(result);
             mResponse.setText(mRespuesta);
-            mSocket=result;
+            mSocket = result;
             actualizaInterfaz();
 //            if(mSocket!=null){
 //                if(!mSocket.isClosed()){
@@ -321,17 +399,18 @@ public class MainActivity extends AppCompatActivity {
 
     public class Autenticar extends AsyncTask<Socket, Void, Socket> {
 
-        private String mRespuesta="";
+        private String mRespuesta = "";
 
         @Override
         protected Socket doInBackground(Socket... arg0) {
 
-            Socket cliente=arg0[0];
+            Socket cliente = arg0[0];
 
-            if(cliente!=null) {
-                if(cliente.isConnected()) {
+            if (cliente != null) {
+                if (cliente.isConnected()) {
                     try {
-                        BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                        BufferedReader bis =
+                                new BufferedReader(new InputStreamReader(cliente.getInputStream()));
                         OutputStream os = cliente.getOutputStream();
 
                         os.write(new String("USER USER\r\n").getBytes());
@@ -340,7 +419,7 @@ public class MainActivity extends AppCompatActivity {
                         os.write(new String("PASS 12345\r\n").getBytes());
                         os.flush();
                         mRespuesta = bis.readLine();
-                        if(mRespuesta!=null) {
+                        if (mRespuesta != null) {
                             if (mRespuesta.startsWith("OK"))
                                 mRespuesta = "Autenticado correctamente";
                             else {
@@ -348,13 +427,13 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     } catch (IOException e) {
-                        mRespuesta=e.getMessage();
+                        mRespuesta = e.getMessage();
                         e.printStackTrace();
                     }
                 } else {
-                    mRespuesta="No está conectado";
+                    mRespuesta = "No está conectado";
                 }
-            }else {
+            } else {
                 mRespuesta = "No está conectado";
             }
             return cliente;
@@ -364,11 +443,126 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(Socket result) {
             super.onPostExecute(result);
             mResponse.setText(mRespuesta);
-            mSocket=result;
+            mSocket = result;
             actualizaInterfaz();
         }
 
     }
 
+    /**
+     * Hebra conectar
+     */
+    public class HebraConectar implements Runnable {
 
+        private InetSocketAddress mIp = null;
+//        private Handler mHandler = null;
+
+        public HebraConectar(InetSocketAddress ip) {
+            mIp = ip;
+
+        }
+
+        protected void enviaRespuesta(String respuesta) {
+            Message recibido = Message.obtain(mHandler, 1);
+            Bundle datos = new Bundle();
+            datos.putString("response", respuesta);
+            recibido.setData(datos);
+            recibido.sendToTarget();
+
+        }
+
+        @Override
+        public void run() {
+            String respuesta = "";
+
+            Socket cliente;
+
+
+//            Looper.prepare();
+//
+//            mHandler = new Handler() {
+//                public void handleMessage(Message msg) {
+//                        switch (msg.what) {
+//                            case 1:
+//
+//                                if (mResponse != null) {
+//                                    String respuesta = msg.getData().getString("response");
+//                                    mResponse.setText(respuesta);
+//                                }
+//                                break;
+//                        }
+//                    }
+//            };
+
+
+            try {
+                //Se crea el socket TCP
+                cliente = new Socket();
+                //Se realiza la conexión al servidor
+                //arg0[0] contiene la dirección IP pasada como parámetro
+                cliente.connect(mIp);
+                //Se leen los datos del buffer de entrada
+                BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                OutputStream os = cliente.getOutputStream();
+                respuesta = bis.readLine();
+                enviaRespuesta(respuesta);
+
+                os.write(new String("USER USER\r\n").getBytes());
+                os.flush();
+                respuesta = bis.readLine();
+                enviaRespuesta(respuesta);
+
+                os.write(new String("PASS 12345\r\n").getBytes());
+                os.flush();
+                respuesta = bis.readLine();
+                if (respuesta != null) {
+                    if (respuesta.startsWith("OK"))
+                        respuesta = "Autenticado correctamente";
+                    else {
+                        respuesta = "Error de autenticación";
+                    }
+                }
+                enviaRespuesta(respuesta);
+
+                for (int n = 0; n < 10; n++) {
+                    os.write(new String("ECHO " + n + "\r\n").getBytes());
+                    os.flush();
+                    respuesta =  bis.readLine();
+                    enviaRespuesta(respuesta);
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                os.write(new String("QUIT\r\n").getBytes());
+                os.flush();
+                respuesta =  bis.readLine();
+                enviaRespuesta(respuesta);
+                bis.close();
+                os.close();
+                cliente.close();
+
+
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+                respuesta = "UnknownHostException: " + e.toString();
+            } catch (IOException e) {
+                e.printStackTrace();
+                respuesta = "IOException: " + e.toString();
+            }
+
+//                mResponse.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mResponse.setText(mRespuesta);
+//                    }
+//                });
+
+
+        }
+
+
+    }
 }
