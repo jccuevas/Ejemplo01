@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     Button mBotonConectar = null;
     Button mBotonEnviar = null;
     private Socket mSocket = null;
-    private String mIp = "192.168.1.159";
+    private String mIp = "192.168.1.162";
     private int mPuerto = 6000;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -78,11 +78,9 @@ public class MainActivity extends AppCompatActivity {
         mHandler = new Handler() {
             @Override
             public void handleMessage(Message inputMessage) {
-                // Gets the image task from the incoming Message object.
-
+                // Obtiene el mensaje de la hebra de conexión.
                 switch (inputMessage.what) {
                     case 1:
-
                         if (mResponse != null) {
                             String respuesta = inputMessage.getData().getString("response");
                             mResponse.setText(respuesta);
@@ -202,7 +200,8 @@ public class MainActivity extends AppCompatActivity {
     public void onConnect(View view) {
 
         InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
-        new Thread(new HebraConectar(direccion)).start();
+        //new Thread(new HebraConectar(direccion)).start();
+        new Thread(new HebraConectarSimple2(direccion)).start();
     }
 
 
@@ -450,12 +449,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Hebra conectar
+     * HebraConectar
      */
     public class HebraConectar implements Runnable {
 
         private InetSocketAddress mIp = null;
-//        private Handler mHandler = null;
 
         public HebraConectar(InetSocketAddress ip) {
             mIp = ip;
@@ -468,38 +466,17 @@ public class MainActivity extends AppCompatActivity {
             datos.putString("response", respuesta);
             recibido.setData(datos);
             recibido.sendToTarget();
-
         }
 
         @Override
         public void run() {
             String respuesta = "";
-
             Socket cliente;
-
-
-//            Looper.prepare();
-//
-//            mHandler = new Handler() {
-//                public void handleMessage(Message msg) {
-//                        switch (msg.what) {
-//                            case 1:
-//
-//                                if (mResponse != null) {
-//                                    String respuesta = msg.getData().getString("response");
-//                                    mResponse.setText(respuesta);
-//                                }
-//                                break;
-//                        }
-//                    }
-//            };
-
 
             try {
                 //Se crea el socket TCP
                 cliente = new Socket();
                 //Se realiza la conexión al servidor
-                //arg0[0] contiene la dirección IP pasada como parámetro
                 cliente.connect(mIp);
                 //Se leen los datos del buffer de entrada
                 BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
@@ -527,7 +504,7 @@ public class MainActivity extends AppCompatActivity {
                 for (int n = 0; n < 10; n++) {
                     os.write(new String("ECHO " + n + "\r\n").getBytes());
                     os.flush();
-                    respuesta =  bis.readLine();
+                    respuesta = bis.readLine();
                     enviaRespuesta(respuesta);
                     try {
                         Thread.sleep(2000);
@@ -538,7 +515,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 os.write(new String("QUIT\r\n").getBytes());
                 os.flush();
-                respuesta =  bis.readLine();
+                respuesta = bis.readLine();
                 enviaRespuesta(respuesta);
                 bis.close();
                 os.close();
@@ -552,17 +529,187 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
                 respuesta = "IOException: " + e.toString();
             }
-
-//                mResponse.post(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        mResponse.setText(mRespuesta);
-//                    }
-//                });
-
-
         }
 
 
+    }
+
+    /**
+     * HebraConectarSimple
+     * Esta clase permite la conexión con un servidor TCP y la recepcion de la respuesta del mismo
+     */
+    public class HebraConectarSimple implements Runnable {
+
+        String  mRespuesta = "";
+        private InetSocketAddress mIp = null;
+
+        public HebraConectarSimple(InetSocketAddress ip) {
+            mIp = ip;
+        }
+
+        @Override
+        public void run() {
+            Socket cliente;
+            try {
+                //Se crea el socket TCP
+                cliente = new Socket();
+                //Se realiza la conexión al servidor
+                cliente.connect(mIp);
+                //Se leen los datos del buffer de entrada
+                BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                OutputStream os = cliente.getOutputStream();
+                mRespuesta = bis.readLine();
+                mResponse.post(new Runnable() {
+                    //mResponse es un atributo de la actividad
+                    // vinculado a un campo de texto
+                    @Override
+                    public void run() {
+                        mResponse.setText(mRespuesta);
+                    }
+                });
+
+                os.write(new String("QUIT\r\n").getBytes());
+                os.flush();
+                mRespuesta = bis.readLine();
+                mResponse.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mResponse.setText(mRespuesta);
+                    }
+                });
+                bis.close();
+                os.close();
+                cliente.close();
+
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+                mRespuesta = "UnknownHostException: " + e.toString();
+            } catch (IOException e) {
+                e.printStackTrace();
+                mRespuesta = "IOException: " + e.toString();
+            }
+
+            mResponse.post(new Runnable() {
+                @Override
+                public void run() {
+                    mResponse.setText(mRespuesta);
+                }
+            });
+        }
+    }
+
+
+    /**
+     * HebraConectarSimple
+     * Esta clase permite la conexión con un servidor TCP y la recepcion de la respuesta del mismo
+     */
+    public class HebraConectarSimple2 implements Runnable {
+
+        String  mRespuesta = "";
+        private InetSocketAddress mIp = null;
+
+        public HebraConectarSimple2 (InetSocketAddress ip) {
+            mIp = ip;
+        }
+
+        @Override
+        public void run() {
+            Socket cliente;
+            try {
+                //Se crea el socket TCP
+                cliente = new Socket();
+                //Se realiza la conexión al servidor
+                cliente.connect(mIp);
+                //Se leen los datos del buffer de entrada
+                BufferedReader bis = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+                OutputStream os = cliente.getOutputStream();
+                mRespuesta = bis.readLine();
+                mResponse.post(new Runnable() {
+                    //mResponse es un atributo de la actividad
+                    // vinculado a un campo de texto
+                    @Override
+                    public void run() {
+                        mResponse.setText(mRespuesta);
+                    }
+                });
+
+                os.write(new String("USER USER\r\n").getBytes());
+                os.flush();
+                mRespuesta = bis.readLine();
+                mResponse.post(new Runnable() {
+                    //mResponse es un atributo de la actividad
+                    // vinculado a un campo de texto
+                    @Override
+                    public void run() {
+                        mResponse.setText(mRespuesta);
+                    }
+                });
+
+                os.write(new String("PASS 12345\r\n").getBytes());
+                os.flush();
+                mRespuesta = bis.readLine();
+                if (mRespuesta != null) {
+                    if (mRespuesta.startsWith("OK"))
+                        mRespuesta = "Autenticado correctamente";
+                    else {
+                        mRespuesta = "Error de autenticación";
+                    }
+                }
+                mResponse.post(new Runnable() {
+                    //mResponse es un atributo de la actividad
+                    // vinculado a un campo de texto
+                    @Override
+                    public void run() {
+                        mResponse.setText(mRespuesta);
+                    }
+                });
+
+                for (int n = 0; n < 10; n++) {
+                    os.write(new String("ECHO " + n + "\r\n").getBytes());
+                    os.flush();
+                    mRespuesta = bis.readLine();
+                    mResponse.post(new Runnable() {
+                        //mResponse es un atributo de la actividad
+                        // vinculado a un campo de texto
+                        @Override
+                        public void run() {
+                            mResponse.setText(mRespuesta);
+                        }
+                    });
+                    try {
+                        Thread.sleep(2000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+                os.write(new String("QUIT\r\n").getBytes());
+                os.flush();
+                mRespuesta = bis.readLine();
+                mResponse.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mResponse.setText(mRespuesta);
+                    }
+                });
+                bis.close();
+                os.close();
+                cliente.close();
+
+            } catch (UnknownHostException e) {
+                e.printStackTrace();
+                mRespuesta = "UnknownHostException: " + e.toString();
+            } catch (IOException e) {
+                e.printStackTrace();
+                mRespuesta = "IOException: " + e.toString();
+            }
+
+            mResponse.post(new Runnable() {
+                @Override
+                public void run() {
+                    mResponse.setText(mRespuesta);
+                }
+            });
+        }
     }
 }
