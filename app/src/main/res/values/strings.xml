@@ -11,4 +11,6 @@
     <string name="main_hint_clave">clave</string>
     <string name="main_nuevo_usuario">Nuevo</string>
     <string name="nuevo_usuario_guardar">Guardar</string>
+    <string name="nuevo_servicio">Iniciando servicio</string>
+    <string name="servicio_etiqueta">Servicio TCP</string>
 </resources>

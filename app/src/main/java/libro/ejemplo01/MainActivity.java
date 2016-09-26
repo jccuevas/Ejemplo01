@@ -3,9 +3,7 @@ package libro.ejemplo01;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
-import android.os.Looper;
 import android.os.Message;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     Button mBotonConectar = null;
     Button mBotonEnviar = null;
     private Socket mSocket = null;
-    private String mIp = "192.168.1.162";
+    private String mIp = "192.168.1.157";
     private int mPuerto = 6000;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -198,10 +196,20 @@ public class MainActivity extends AppCompatActivity {
 
     //Versión con hebras
     public void onConnect(View view) {
-
-        InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
+        //InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
         //new Thread(new HebraConectar(direccion)).start();
-        new Thread(new HebraConectarSimple2(direccion)).start();
+        //new Thread(new HebraConectarSimple2(direccion)).start();
+        ServicioNotificaciones servicio = new ServicioNotificaciones();
+        Intent conecta= new Intent(this,ServicioNotificaciones.class);
+        conecta.putExtra(ServicioNotificaciones.EXTRA_IP,mIp);
+        conecta.putExtra(ServicioNotificaciones.EXTRA_PORT,mPuerto);
+        startService(conecta);
+
+//        ServicioConectar servicio = new ServicioConectar();
+//        Intent conecta= new Intent(this,ServicioConectar.class);
+//        conecta.putExtra(ServicioConectar.EXTRA_IP,mIp);
+//        conecta.putExtra(ServicioConectar.EXTRA_PORT,mPuerto);
+//        startService(conecta);
     }
 
 
