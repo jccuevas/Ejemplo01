@@ -35,7 +35,8 @@ public class ServicioConectar extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
-        mId=startId;
+        mId=startId; //Se guarda el identificador para poder parar el servicio
+                     // si fuera necesario
 
         Toast.makeText(this,getString(R.string.nuevo_servicio), Toast.LENGTH_SHORT).show();
 
@@ -127,6 +128,7 @@ public class ServicioConectar extends Service {
                 mRespuesta = "IOException: " + e.toString();
             } finally {
                 //stopForeground(true);
+                Toast.makeText(getApplicationContext(),"Parando",Toast.LENGTH_LONG).show();
                 stopSelf(mId);
             }
 

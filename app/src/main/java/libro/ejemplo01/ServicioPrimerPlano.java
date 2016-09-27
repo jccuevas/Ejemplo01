@@ -16,7 +16,7 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class ServicioNotificaciones extends Service {
+public class ServicioPrimerPlano extends Service {
     public static final String EXTRA_IP = "servicio_ip";
     public static final String EXTRA_PORT = "servicio_puerto";
     protected String mIp = "192.158.1.157";
@@ -24,7 +24,7 @@ public class ServicioNotificaciones extends Service {
     private NotificationManager mNM;
     private int mId = 1;
 
-    public ServicioNotificaciones() {
+    public ServicioPrimerPlano() {
     }
 
     @Override
@@ -48,18 +48,18 @@ public class ServicioNotificaciones extends Service {
             mPuerto = intent.getIntExtra(EXTRA_PORT, mPuerto);
             InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
 
-            // The PendingIntent to launch our activity if the user selects this notification
-//            PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-//                    new Intent(this, MainActivity.class), 0);
-//
-//            NotificationCompat.Builder notificacion =
-//                    new NotificationCompat.Builder(this)
-//                            .setSmallIcon(R.drawable.ic_stat_communication)
-//                            .setContentTitle(getText(R.string.servicio_etiqueta))
-//                            .setContentText("Conectando con " + mIp + ":" + mPuerto)// the contents of the entry
-//                            .setContentIntent(contentIntent);
-//
-//            startForeground(mId, notificacion.build());
+            // El PendingIntent a lanzar si el usuario pulsa en la notificación
+            PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
+                    new Intent(this, MainActivity.class), 0);
+
+            NotificationCompat.Builder notificacion =
+                    new NotificationCompat.Builder(this)
+                            .setSmallIcon(R.drawable.ic_stat_communication)
+                            .setContentTitle(getText(R.string.servicio_etiqueta))
+                            .setContentText("Conectando con " + mIp + ":" + mPuerto)// the contents of the entry
+                            .setContentIntent(contentIntent);
+
+            startForeground(mId, notificacion.build());
 
             new Thread(new HebraConectarSimple(direccion)).start();
         }
@@ -162,6 +162,7 @@ public class ServicioNotificaciones extends Service {
                 e.printStackTrace();
                 mRespuesta = "IOException: " + e.toString();
             } finally {
+                stopForeground(true);
                 stopSelf(mId);//Una vez la hebra termina, se detiene el servicio
             }
 

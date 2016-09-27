@@ -199,13 +199,19 @@ public class MainActivity extends AppCompatActivity {
         //InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
         //new Thread(new HebraConectar(direccion)).start();
         //new Thread(new HebraConectarSimple2(direccion)).start();
-        ServicioNotificaciones servicio = new ServicioNotificaciones();
-        Intent conecta= new Intent(this,ServicioNotificaciones.class);
-        conecta.putExtra(ServicioNotificaciones.EXTRA_IP,mIp);
-        conecta.putExtra(ServicioNotificaciones.EXTRA_PORT,mPuerto);
+//        ServicioNotificaciones servicio = new ServicioNotificaciones();
+//        Intent conecta= new Intent(this,ServicioNotificaciones.class);
+//        conecta.putExtra(ServicioNotificaciones.EXTRA_IP,mIp);
+//        conecta.putExtra(ServicioNotificaciones.EXTRA_PORT,mPuerto);
+
+
+
+        Intent conecta= new Intent(this,ServicioPrimerPlano.class);
+        conecta.putExtra(ServicioPrimerPlano.EXTRA_IP,mIp);
+        conecta.putExtra(ServicioPrimerPlano.EXTRA_PORT,mPuerto);
         startService(conecta);
 
-//        ServicioConectar servicio = new ServicioConectar();
+
 //        Intent conecta= new Intent(this,ServicioConectar.class);
 //        conecta.putExtra(ServicioConectar.EXTRA_IP,mIp);
 //        conecta.putExtra(ServicioConectar.EXTRA_PORT,mPuerto);
