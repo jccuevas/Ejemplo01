@@ -29,20 +29,23 @@
         <service
             android:name=".ServicioConectar"
             android:enabled="true"
-            android:exported="false"></service>
+            android:exported="false" />
         <service
-        android:name=".ServicioPrimerPlano"
-        android:enabled="true"
-        android:exported="false"></service>
+            android:name=".ServicioPrimerPlano"
+            android:enabled="true"
+            android:exported="false" />
         <service
             android:name=".ServicioNotificaciones"
             android:enabled="true"
-            android:exported="false"></service>
+            android:exported="false" />
         <service
             android:name=".ServicioConectarNuevoProceso"
             android:enabled="true"
             android:exported="false"
-            android:process=":local"></service>
+            android:process=":local" />
+        <service
+            android:name=".IntentServiceConectar"
+            android:exported="false"></service>
     </application>
 
 </manifest>

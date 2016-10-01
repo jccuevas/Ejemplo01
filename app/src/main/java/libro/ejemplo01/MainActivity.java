@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //    }
 
-    //Versión con hebras
+
     public void onConnect(View view) {
         //InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
         //new Thread(new HebraConectar(direccion)).start();
@@ -205,10 +205,14 @@ public class MainActivity extends AppCompatActivity {
 //        conecta.putExtra(ServicioNotificaciones.EXTRA_PORT,mPuerto);
 
 
+//        Intent conecta= new Intent(this,ServicioPrimerPlano.class);
+//        conecta.putExtra(ServicioPrimerPlano.EXTRA_IP,mIp);
+//        conecta.putExtra(ServicioPrimerPlano.EXTRA_PORT,mPuerto);
 
-        Intent conecta= new Intent(this,ServicioPrimerPlano.class);
-        conecta.putExtra(ServicioPrimerPlano.EXTRA_IP,mIp);
-        conecta.putExtra(ServicioPrimerPlano.EXTRA_PORT,mPuerto);
+        Intent conecta = new Intent(this, IntentServiceConectar.class);
+        conecta.putExtra(IntentServiceConectar.EXTRA_IP, mIp);
+        conecta.putExtra(IntentServiceConectar.EXTRA_PORT, mPuerto);
+
         startService(conecta);
 
 
@@ -554,7 +558,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public class HebraConectarSimple implements Runnable {
 
-        String  mRespuesta = "";
+        String mRespuesta = "";
         private InetSocketAddress mIp = null;
 
         public HebraConectarSimple(InetSocketAddress ip) {
@@ -619,10 +623,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public class HebraConectarSimple2 implements Runnable {
 
-        String  mRespuesta = "";
+        String mRespuesta = "";
         private InetSocketAddress mIp = null;
 
-        public HebraConectarSimple2 (InetSocketAddress ip) {
+        public HebraConectarSimple2(InetSocketAddress ip) {
             mIp = ip;
         }
 
