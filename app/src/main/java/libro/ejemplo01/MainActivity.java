@@ -1,8 +1,10 @@
 package libro.ejemplo01;
 
+import android.content.ComponentName;
 import android.content.Intent;
-import android.net.Uri;
+import android.content.ServiceConnection;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -22,7 +24,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
@@ -42,13 +43,35 @@ public class MainActivity extends AppCompatActivity {
     Button mBotonConectar = null;
     Button mBotonEnviar = null;
     private Socket mSocket = null;
-    private String mIp = "192.168.1.157";
+    //private String mIp = "192.168.1.157";
+    private String mIp = "192.168.1.162";
     private int mPuerto = 6000;
+
+    private ServicioVinculadoConectar mServicio=null;
+    private boolean mVinculado=false;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
+    /** Define las llamadas para a vinculación del servicio pasado en bindService() */
+    private ServiceConnection mConexion = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName className,
+                                       IBinder service) {
+            // Para obtener la instancia al Binder del servicio basta con poner un casting
+            ServicioVinculadoConectar.SocketBinder binder = (ServicioVinculadoConectar.SocketBinder) service;
+            mServicio = binder.getService();
+            //Se emplea para comprobar si el servicio está vinculado o no
+            mVinculado = true;
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName arg0) {
+            mVinculado = false;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -113,37 +135,37 @@ public class MainActivity extends AppCompatActivity {
             outState.putBoolean(ESTADO_CONECTADO, false);
     }
 
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        // ATTENTION: This was auto-generated to implement the App Indexing API.
+//        // See https://g.co/AppIndexing/AndroidStudio for more information.
+//        Action viewAction = Action.newAction(
+//                Action.TYPE_VIEW, // TODO: choose an action type.
+//                "Main Page", // TODO: Define a title for the content shown.
+//                // TODO: If you have web page content that matches this app activity's content,
+//                // make sure this auto-generated web page URL is correct.
+//                // Otherwise, set the URL to null.
+//                Uri.parse("http://host/path"),
+//                // TODO: Make sure this auto-generated app URL is correct.
+//                Uri.parse("android-app://libro.ejemplo01/http/host/path")
+//        );
+//        AppIndex.AppIndexApi.end(client, viewAction);
+//        if (mSocket != null)
+//            if (!mSocket.isClosed())
+//                try {
+//                    mSocket.close();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//        // ATTENTION: This was auto-generated to implement the App Indexing API.
+//        // See https://g.co/AppIndexing/AndroidStudio for more information.
+//        client.disconnect();
+//    }
+
     @Override
     protected void onPause() {
         super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://libro.ejemplo01/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        if (mSocket != null)
-            if (!mSocket.isClosed())
-                try {
-                    mSocket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.disconnect();
     }
 
     @Override
@@ -209,12 +231,17 @@ public class MainActivity extends AppCompatActivity {
 //        conecta.putExtra(ServicioPrimerPlano.EXTRA_IP,mIp);
 //        conecta.putExtra(ServicioPrimerPlano.EXTRA_PORT,mPuerto);
 
-        Intent conecta = new Intent(this, IntentServiceConectar.class);
-        conecta.putExtra(IntentServiceConectar.EXTRA_IP, mIp);
-        conecta.putExtra(IntentServiceConectar.EXTRA_PORT, mPuerto);
+//        Intent conecta = new Intent(this, IntentServiceConectar.class);
+//        conecta.putExtra(IntentServiceConectar.EXTRA_IP, mIp);
+//        conecta.putExtra(IntentServiceConectar.EXTRA_PORT, mPuerto);
+//
+//        startService(conecta);
 
-        startService(conecta);
-
+         //Servicio vinculado
+        if (mVinculado) {
+            //Se invoca el método conectar del servicio
+            mServicio.conectar(new InetSocketAddress(mIp,mPuerto));
+        }
 
 //        Intent conecta= new Intent(this,ServicioConectar.class);
 //        conecta.putExtra(ServicioConectar.EXTRA_IP,mIp);
@@ -222,6 +249,23 @@ public class MainActivity extends AppCompatActivity {
 //        startService(conecta);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        // Al iniciar la actividad se conecta al servicio
+        Intent intent = new Intent(this, ServicioVinculadoConectar.class);
+        bindService(intent, mConexion, BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // Cuando la actividad va a ser parade se desvincula del servicio
+        if (mVinculado) {
+            unbindService(mConexion);
+            mVinculado = false;
+        }
+    }
 
     public void onSend(View view) {
 
@@ -255,25 +299,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Main Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://libro.ejemplo01/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//
+//        // ATTENTION: This was auto-generated to implement the App Indexing API.
+//        // See https://g.co/AppIndexing/AndroidStudio for more information.
+//        client.connect();
+//        Action viewAction = Action.newAction(
+//                Action.TYPE_VIEW, // TODO: choose an action type.
+//                "Main Page", // TODO: Define a title for the content shown.
+//                // TODO: If you have web page content that matches this app activity's content,
+//                // make sure this auto-generated web page URL is correct.
+//                // Otherwise, set the URL to null.
+//                Uri.parse("http://host/path"),
+//                // TODO: Make sure this auto-generated app URL is correct.
+//                Uri.parse("android-app://libro.ejemplo01/http/host/path")
+//        );
+//        AppIndex.AppIndexApi.start(client, viewAction);
+//    }
 
     //        InetSocketAddress direccion = new InetSocketAddress(ip,puerto);
 //        Conectar conecta = new Conectar();
