@@ -10,35 +10,6 @@
     tools:context="libro.ejemplos.MainActivity">
 
     <TextView
-        android:id="@+id/main_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="@string/main_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" />
-
-    <Button
-        android:id="@+id/main_connect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="onConnect"
-        android:text="@string/main_button_connect" />
-    <Button
-        android:id="@+id/main_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/main_connect"
-        android:layout_alignLeft="@+id/main_connect"
-        android:layout_alignRight="@+id/main_connect"
-        android:layout_alignStart="@+id/main_connect"
-        android:layout_below="@+id/main_connect"
-        android:onClick="onSend"
-        android:text="@string/main_button_send" />
-
-    <TextView
         android:id="@+id/main_response"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,14 +24,6 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/edit_nombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_title"
-        android:layout_centerHorizontal="true"
-        android:hint="@string/main_hint_nombre"
-        android:inputType="text" />
-    <EditText
         android:id="@+id/edit_clave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,12 +35,52 @@
         android:hint="@string/main_hint_clave"
         android:inputType="textPassword" />
 
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/main_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" />
+
+    <EditText
+        android:id="@+id/edit_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/main_title"
+        android:hint="@string/main_hint_nombre"
+        android:inputType="text" />
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/edit_clave"
-        android:layout_centerHorizontal="true"
         android:onClick="nuevoUsuario"
         android:text="@string/main_nuevo_usuario" />
+
+    <Button
+        android:id="@+id/main_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onConnect"
+        android:text="@string/main_button_connect" />
+
+    <Button
+        android:id="@+id/main_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/main_connect"
+        android:layout_toRightOf="@+id/main_connect"
+        android:onClick="onSend"
+        android:text="@string/main_button_send" />
 </RelativeLayout>

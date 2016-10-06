@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Ejemplo01</string>
+    <string name="app_name">Ejemplos para Android</string>
+    <string name="app_author">Juan Carlos Cuevas Martínez</string>
+
+
     <string name="main_button_connect">Conectar</string>
     <string name="main_button_disconnect">Desconectar</string>
     <string name="main_disconnected"><i>Desconectado</i></string>
@@ -13,4 +16,32 @@
     <string name="nuevo_usuario_guardar">Guardar</string>
     <string name="nuevo_servicio">Iniciando servicio</string>
     <string name="servicio_etiqueta">Servicio TCP</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+
+    <string name="navigation_drawer_open">Abrir el menú de navegación</string>
+    <string name="navigation_drawer_close">Cerrar el menú de navegacón</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="menu_ejemplos_tareas">Hebras y Tareas</string>
+    <string name="menu_ejemplo_1">Ejemplo 1</string>
+    <string name="menu_ejemplo_2">Ejemplo 2</string>
+    <string name="menu_ejemplo_3">Ejemplo 3</string>
+    <string name="menu_ejemplo_4">Ejemplo 4</string>
+    <string name="menu_ejemplo_5">Ejemplo 5</string>
+    <string name="menu_ejemplo_6">Ejemplo 6</string>
+    <string name="menu_ejemplo_7">Ejemplo 7</string>
+    <string name="menu_ejemplo_8">Ejemplo 8</string>
+    <string name="menu_ejemplo_9">Ejemplo 9</string>
+    <string name="menu_ejemplo_10">Ejemplo 10</string>
+    <string name="menu_ejemplo_11">Ejemplo 11</string>
+    <string name="menu_ejemplo_12">Ejemplo 12</string>
+    <string name="menu_ejemplo_13">Ejemplo 13</string>
+    <string name="menu_ejemplo_14">Ejemplo 14</string>
+    <string name="menu_ejemplo_15">Ejemplo 15</string>
+    <string name="menu_ejemplo_16">Ejemplo 16</string>
+    <string name="menu_ejemplo_17">Ejemplo 17</string>
+    <string name="menu_ejemplo_18">Ejemplo 18</string>
+    <string name="menu_ejemplo_19">Ejemplo 19</string>
+    <string name="menu_ejemplo_20">Ejemplo 20</string>
+
 </resources>
