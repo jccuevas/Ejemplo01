@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:title="@string/menu_ejemplos_tareas">
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/menu_ejemplo_1"
-            android:icon="@drawable/ic_menu_tareas"
-            android:title="@string/menu_ejemplo_1" />
+        <item android:title="@string/menu_ejemplos_tareas">
 
+            <item
+                android:id="@+id/ejemplo_1"
+                android:icon="@drawable/ic_menu_tareas"
+                android:title="@string/menu_ejemplo_1" />
+
+
+        </item>
     </group>
-</item>
+
+    <item android:title="@string/menu_ejemplos_comunicaciones">
+
+        <item
+            android:id="@+id/ejemplo_21"
+            android:icon="@drawable/ic_menu_tareas"
+            android:title="@string/menu_ejemplo_21" />
 
 
+    </item>
 </menu>
