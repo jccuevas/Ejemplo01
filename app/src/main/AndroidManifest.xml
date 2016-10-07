@@ -61,6 +61,8 @@
         <activity
             android:name=".Ejemplo21"
             android:label="@string/menu_ejemplo_21" />
+        <activity android:name=".Ejemplo22"
+            android:label="@string/menu_ejemplo_22" />
     </application>
 
 </manifest>

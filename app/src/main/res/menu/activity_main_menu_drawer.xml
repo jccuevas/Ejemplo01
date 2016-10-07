@@ -16,8 +16,12 @@
 
         <item
             android:id="@+id/ejemplo_21"
-            android:icon="@drawable/ic_menu_tareas"
+            android:icon="@drawable/ic_menu_ftp"
             android:title="@string/menu_ejemplo_21" />
+        <item
+            android:id="@+id/ejemplo_22"
+            android:icon="@drawable/ic_menu_http"
+            android:title="@string/menu_ejemplo_22" />
 
 
     </item>

@@ -45,12 +45,19 @@
     <string name="menu_ejemplo_18">Ejemplo 18</string>
     <string name="menu_ejemplo_19">Ejemplo 19</string>
     <string name="menu_ejemplo_20">Ejemplo 20</string>
-    <string name="menu_ejemplo_21">Ejemplo 21</string>
+    <string name="menu_ejemplo_21">Ejemplo 21 - Ftp</string>
+    <string name="menu_ejemplo_22">Ejemplo 22 - Http</string>
     <string name="app_content_logo">Logo de la aplicación</string>
     <string name="e21_url">ftp://ftp.ujaen.es/welcome.msg</string>
     <string name="e21_descargar">Descargar</string>
     <string name="e21_description">Ejemplo de descarga de un recurso con FTP</string>
     <string name="e21_descargando">Descargando...</string>
     <string name="main_label_author">Autor</string>
+
+
+    <string name="e22_url">http://www.android.com</string>
+    <string name="e22_descargar">Descargar</string>
+    <string name="e22_description">Ejemplo de descarga de un recurso con HTTP</string>
+    <string name="e22_descargando">Descargando...</string>
 
 </resources>
