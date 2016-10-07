@@ -70,8 +70,8 @@ public class Ejemplo22 extends AppCompatActivity {
         try {
             URL url = new URL(direccion);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setReadTimeout(10000 /* milliseconds */);
-            conn.setConnectTimeout(15000 /* milliseconds */);
+            conn.setReadTimeout(2000 /* milisegundos */);
+            conn.setConnectTimeout(15000 /* milisegundos */);
             conn.setRequestMethod("GET");
             conn.setDoInput(true);
             conn.connect();
@@ -96,7 +96,7 @@ public class Ejemplo22 extends AppCompatActivity {
                     @Override
                     public void run() {
                         mBar.dismiss();
-                        mResultado.loadData(datos, contentType, "UTF-8");
+                        mResultado.loadData(datos, contentType, "iso_8859-15");
                     }
                 });
             }
