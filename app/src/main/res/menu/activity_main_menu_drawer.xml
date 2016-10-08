@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
-        <item android:title="@string/menu_ejemplos_tareas">
 
+    <item android:title="@string/menu_ejemplos_tareas">
+        <menu>
             <item
                 android:id="@+id/ejemplo_1"
                 android:icon="@drawable/ic_menu_tareas"
                 android:title="@string/menu_ejemplo_1" />
 
+        </menu>
+    </item>
 
-        </item>
-    </group>
 
     <item android:title="@string/menu_ejemplos_comunicaciones">
+        <menu>
+            <item
+                android:id="@+id/ejemplo_21"
+                android:icon="@drawable/ic_menu_ftp"
+                android:title="@string/menu_ejemplo_21" />
+            <item
+                android:id="@+id/ejemplo_22"
+                android:icon="@drawable/ic_menu_http"
+                android:title="@string/menu_ejemplo_22" />
 
-        <item
-            android:id="@+id/ejemplo_21"
-            android:icon="@drawable/ic_menu_ftp"
-            android:title="@string/menu_ejemplo_21" />
-        <item
-            android:id="@+id/ejemplo_22"
-            android:icon="@drawable/ic_menu_http"
-            android:title="@string/menu_ejemplo_22" />
-
-
+            <item
+                android:id="@+id/ejemplo_23"
+                android:icon="@drawable/ic_menu_http"
+                android:title="@string/menu_ejemplo_23" />
+        </menu>
     </item>
 </menu>

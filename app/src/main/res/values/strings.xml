@@ -47,6 +47,7 @@
     <string name="menu_ejemplo_20">Ejemplo 20</string>
     <string name="menu_ejemplo_21">Ejemplo 21 - Ftp</string>
     <string name="menu_ejemplo_22">Ejemplo 22 - Http</string>
+    <string name="menu_ejemplo_23">Ejemplo 23 - Parámetros en HTTP</string>
     <string name="app_content_logo">Logo de la aplicación</string>
     <string name="e21_url">ftp://ftp.ujaen.es/welcome.msg</string>
     <string name="e21_descargar">Descargar</string>
@@ -54,10 +55,18 @@
     <string name="e21_descargando">Descargando...</string>
     <string name="main_label_author">Autor</string>
 
-
     <string name="e22_url">http://www.android.com</string>
     <string name="e22_descargar">Descargar</string>
     <string name="e22_description">Ejemplo de descarga de un recurso con HTTP</string>
     <string name="e22_descargando">Descargando...</string>
+
+    <string name="e23_url">http://www.android.com</string>
+    <string name="e23_descargar">Descargar</string>
+    <string name="e23_description">Ejemplo de formateo de URL</string>
+    <string name="e23_descargando">Descargando...</string>
+    <string name="e23_domain">Dominio</string>
+    <string name="e23_parametros">Parámetros</string>
+    <string name="e23_hint_parametros">Parámetro</string>
+    <string name="e23_hint_valor">Valor</string>
 
 </resources>

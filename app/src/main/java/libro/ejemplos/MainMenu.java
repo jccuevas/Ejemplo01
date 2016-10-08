@@ -79,6 +79,9 @@ public class MainMenu extends AppCompatActivity
         }else if (id == R.id.ejemplo_22) {
             Intent ejempo22 = new Intent(this, Ejemplo22.class);
             startActivity(ejempo22);
+        }else if (id == R.id.ejemplo_23) {
+            Intent ejempo22 = new Intent(this, Ejemplo23.class);
+            startActivity(ejempo22);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
