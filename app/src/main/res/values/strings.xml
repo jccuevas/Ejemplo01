@@ -23,10 +23,10 @@
     <string name="navigation_drawer_close">Cerrar el menú de navegacón</string>
 
     <string name="action_about">Acerca de...</string>
+    <string name="menu_ejemplos_basico">Conceptos básicos</string>
     <string name="menu_ejemplos_tareas">Hebras y Tareas</string>
     <string name="menu_ejemplos_comunicaciones">Comunicaciones</string>
-    <string name="menu_ejemplo_1">Ejemplo 1</string>
-    <string name="menu_ejemplo_2">Ejemplo 2</string>
+    <string name="menu_ejemplo_1">Ejemplo 1 y 2</string>
     <string name="menu_ejemplo_3">Ejemplo 3</string>
     <string name="menu_ejemplo_4">Ejemplo 4</string>
     <string name="menu_ejemplo_5">Ejemplo 5</string>
@@ -47,7 +47,10 @@
     <string name="menu_ejemplo_20">Ejemplo 20</string>
     <string name="menu_ejemplo_21">Ejemplo 21 - Ftp</string>
     <string name="menu_ejemplo_22">Ejemplo 22 - Http</string>
-    <string name="menu_ejemplo_23">Ejemplo 23 - Parámetros en HTTP</string>
+    <string name="menu_ejemplo_23">Ejemplo 23 - GET</string>
+    <string name="menu_ejemplo_24">Ejemplo 24 - POST</string>
+    <string name="menu_ejemplo_25">Ejemplo 25 - Cookies</string>
+
     <string name="app_content_logo">Logo de la aplicación</string>
     <string name="e21_url">ftp://ftp.ujaen.es/welcome.msg</string>
     <string name="e21_descargar">Descargar</string>
@@ -55,18 +58,40 @@
     <string name="e21_descargando">Descargando...</string>
     <string name="main_label_author">Autor</string>
 
-    <string name="e22_url">http://www.android.com</string>
+    <string name="e22_url">https://www.android.com</string>
     <string name="e22_descargar">Descargar</string>
     <string name="e22_description">Ejemplo de descarga de un recurso con HTTP</string>
     <string name="e22_descargando">Descargando...</string>
 
-    <string name="e23_url">http://www.android.com</string>
+    <string name="e23_url">www.google.es</string>
     <string name="e23_descargar">Descargar</string>
-    <string name="e23_description">Ejemplo de formateo de URL</string>
+    <string name="e23_description">Ejemplo de formateo de URL para método GET</string>
     <string name="e23_descargando">Descargando...</string>
     <string name="e23_domain">Dominio</string>
     <string name="e23_parametros">Parámetros</string>
     <string name="e23_hint_parametros">Parámetro</string>
     <string name="e23_hint_valor">Valor</string>
 
+
+    <string name="e24_url">un dominio</string>
+    <string name="e24_descargar">Autenticar</string>
+    <string name="e24_description">Ejemplo envío de parámetros con el método POST</string>
+    <string name="e24_descargando">Descargando...</string>
+    <string name="e24_domain">Dominio</string>
+    <string name="e24_user">Usuario</string>
+    <string name="e24_pass">Clave</string>
+    <string name="e24_hint_user">nombre</string>
+    <string name="e24_hint_pass">clave</string>
+
+
+    <string name="e25_url">www.android.com</string>
+    <string name="e25_descargar">Enviar</string>
+    <string name="e25_description">Ejemplo de formateo de URL para método GET</string>
+    <string name="e25_descargando">Descargando...</string>
+    <string name="e25_domain">Dominio</string>
+    <string name="e25_parametros">Cookie</string>
+    <string name="e25_hint_parametros">id</string>
+    <string name="e25_hint_valor">valor</string>
+
+    <string name="e25_error_badURI">URI mal formateada</string>
 </resources>

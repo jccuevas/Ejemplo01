@@ -9,19 +9,25 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class Ejemplo23 extends AppCompatActivity {
+public class Ejemplo24 extends AppCompatActivity {
 
     public static final String URL_SCHEMA = "http";
     public static final String URL_CHARSET = "UTF-8";//Para las URL debe ser este juego de caracteres
-    public static final String DEBUG_TAG = "Debug-Ejemplo23";
+    public static final String DEBUG_TAG = "Debug-Ejemplo24";
+    public static final String SERVER = "192.168.1.162/wwwLibro/login.php";
+    public static final String CRLF = "\r\n";
     public int mTotal = 0;
 
     WebView mResultado = null;
@@ -31,63 +37,86 @@ public class Ejemplo23 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejemplo23);
+        setContentView(R.layout.activity_ejemplo24);
 
-        mResultado = (WebView) findViewById(R.id.e23_webview);
+        mResultado = (WebView) findViewById(R.id.e24_webview);
 
-        final EditText editDominio = (EditText) findViewById(R.id.e23_edit_url);//Dominio y recurso
-        final EditText editParametro = (EditText) findViewById(R.id.e23_edit_param);
-        final EditText editValor = (EditText) findViewById(R.id.e23_edit_valor);
+        final EditText editUser = (EditText) findViewById(R.id.e24_edit_user);
+        final EditText editPass = (EditText) findViewById(R.id.e24_edit_pass);
 
 
         mBar = new ProgressDialog(this);
         mBar.setIndeterminate(false);
         mBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 
-        mBar.setTitle(getString(R.string.e23_descargando));
+        mBar.setTitle(getString(R.string.e24_descargando));
 
-        Button descargar = (Button) findViewById(R.id.e23_descargar);
-        descargar.setOnClickListener(new View.OnClickListener() {
+        Button login = (Button) findViewById(R.id.e24_descargar);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String dominio = editDominio.getEditableText().toString();
-                String parametro="";
-                String valor="";
                 try {
-                    parametro = URLEncoder.encode(editParametro.getEditableText().toString(),URL_CHARSET);
-                    valor = URLEncoder.encode(editValor.getEditableText().toString(),URL_CHARSET);
+                final String user = URLEncoder.encode(editUser.getEditableText().toString(), URL_CHARSET);
+                final String pass = URLEncoder.encode(editPass.getEditableText().toString(), URL_CHARSET);
+
+                    final String urlFinal = URL_SCHEMA + "://" + SERVER;
+
+                    mBar.setMessage(urlFinal);
+                    mBar.show();
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                autenticaPost(urlFinal, user, pass);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
-                final String urlFinal = URL_SCHEMA + "://" +dominio+"?"+parametro+"="+valor;
-
-                mBar.setMessage(urlFinal);
-                mBar.show();
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            descargaHttp(urlFinal);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }).start();
             }
         });
     }
 
 
-    private void descargaHttp(String direccion) throws IOException {
+    /**
+     * @param direccion URL del recurso para el login
+     * @param user      identificador de usuario
+     * @param pass      clave del usuario
+     * @throws IOException
+     */
+    private void autenticaPost(String direccion, String user, String pass) throws IOException {
         InputStream is = null;
+        DataOutputStream dos = null;
         URL url = new URL(direccion);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         try {
-            conn.setReadTimeout(2000 /* milisegundos */);
+            conn.setReadTimeout(10000 /* milisegundos */);
             conn.setConnectTimeout(15000 /* milisegundos */);
-            conn.setRequestMethod("GET");
+            //Se establece POST como método de envío
+            conn.setRequestMethod("POST");
+            //Se activa el envío de datos en el cuerpo de la petición
+            conn.setDoOutput(true);
+            //Se activa también la lectura del cuerpo de la respuesta
             conn.setDoInput(true);
+
+
+            //Se escribe la petición, se ha puesto fraccionada para que se vea
+            //el formato <parametro>=<valor> y & para añadir otro
+            OutputStream os = conn.getOutputStream();
+            BufferedWriter wr = new BufferedWriter(
+                    new OutputStreamWriter(os, URL_CHARSET));
+
+            wr.write("user=" + user);
+            wr.write("&");
+            wr.write("pass=" + pass);
+            wr.flush();
+            wr.close ();
             conn.connect();
+
+            //Se lee la respuesta
             int response = conn.getResponseCode();
             final int len = conn.getHeaderFieldInt("CONTENT-LENGTH", 1024);
             final String contentType = conn.getHeaderField("CONTENT-TYPE");
@@ -101,44 +130,6 @@ public class Ejemplo23 extends AppCompatActivity {
                 }
             });
 
-            final String datos = new String(readStream(is));
-            if (datos != null) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mBar.dismiss();
-                        mResultado.loadData(datos, contentType, "iso_8859-15");
-                    }
-                });
-            }
-            is.close();
-        } finally {
-           conn.disconnect();
-        }
-    }
-
-    private void autencicaHttp(String direccion) throws IOException {
-        InputStream is = null;
-        URL url = new URL(direccion);
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        try {
-            conn.setReadTimeout(2000 /* milisegundos */);
-            conn.setConnectTimeout(15000 /* milisegundos */);
-            conn.setRequestMethod("GET");
-            conn.setDoInput(true);
-            conn.connect();
-            int response = conn.getResponseCode();
-            final int len = conn.getHeaderFieldInt("CONTENT-LENGTH", 1024);
-            final String contentType = conn.getHeaderField("CONTENT-TYPE");
-            Log.d(DEBUG_TAG, "The response is: " + response);
-            is = conn.getInputStream();
-
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    mBar.setMax(len);
-                }
-            });
 
             final String datos = new String(readStream(is));
             if (datos != null) {

@@ -24,19 +24,19 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/edit_clave"
+        android:id="@+id/e01_edit_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/edit_nombre"
-        android:layout_alignLeft="@+id/edit_nombre"
-        android:layout_alignRight="@+id/edit_nombre"
-        android:layout_alignStart="@+id/edit_nombre"
-        android:layout_below="@+id/edit_nombre"
+        android:layout_alignEnd="@+id/e01_edit_name"
+        android:layout_alignLeft="@+id/e01_edit_name"
+        android:layout_alignRight="@+id/e01_edit_name"
+        android:layout_alignStart="@+id/e01_edit_name"
+        android:layout_below="@+id/e01_edit_name"
         android:hint="@string/main_hint_clave"
         android:inputType="textPassword" />
 
     <TextView
-        android:id="@+id/main_title"
+        android:id="@+id/e01_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -46,12 +46,12 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" />
 
     <EditText
-        android:id="@+id/edit_nombre"
+        android:id="@+id/e01_edit_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/main_title"
+        android:layout_below="@+id/e01_title"
         android:hint="@string/main_hint_nombre"
         android:inputType="text" />
 
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/edit_clave"
+        android:layout_below="@+id/e01_edit_pass"
         android:onClick="nuevoUsuario"
         android:text="@string/main_nuevo_usuario" />
 

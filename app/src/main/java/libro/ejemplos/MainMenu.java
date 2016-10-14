@@ -73,6 +73,9 @@ public class MainMenu extends AppCompatActivity
         if (id == R.id.ejemplo_1) {
             Intent ejempo1 = new Intent(this,Ejemplo1.class);
             startActivity(ejempo1);
+        } else if (id == R.id.ejemplo_3) {
+            Intent ejempo3 = new Intent(this,Ejemplo3.class);
+            startActivity(ejempo3);
         } else if (id == R.id.ejemplo_21) {
             Intent ejempo21 = new Intent(this, Ejemplo21.class);
             startActivity(ejempo21);
@@ -81,6 +84,12 @@ public class MainMenu extends AppCompatActivity
             startActivity(ejempo22);
         }else if (id == R.id.ejemplo_23) {
             Intent ejempo22 = new Intent(this, Ejemplo23.class);
+            startActivity(ejempo22);
+        }else if (id == R.id.ejemplo_24) {
+            Intent ejempo22 = new Intent(this, Ejemplo24.class);
+            startActivity(ejempo22);
+        }else if (id == R.id.ejemplo_25) {
+            Intent ejempo22 = new Intent(this, Ejemplo25.class);
             startActivity(ejempo22);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

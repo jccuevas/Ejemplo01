@@ -294,8 +294,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void nuevoUsuario(View view) {
         Intent intent = new Intent(this, NuevoUsuarioActivity.class);
-        EditText campo_nombre = (EditText) findViewById(R.id.edit_nombre);
-        EditText campo_clave = (EditText) findViewById(R.id.edit_clave);
+        EditText campo_nombre = (EditText) findViewById(R.id.e01_edit_name);
+        EditText campo_clave = (EditText) findViewById(R.id.e01_edit_pass);
         String nombre = campo_nombre.getText().toString();
         String clave = campo_clave.getText().toString();
         intent.putExtra(EXTRA_NOMBRE, nombre);

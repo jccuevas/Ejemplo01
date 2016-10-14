@@ -8,21 +8,37 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import java.io.BufferedWriter;
 import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.CookieHandler;
+import java.net.CookieManager;
+import java.net.CookiePolicy;
+import java.net.HttpCookie;
 import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class Ejemplo23 extends AppCompatActivity {
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+
+public class Ejemplo25 extends AppCompatActivity {
 
     public static final String URL_SCHEMA = "http";
     public static final String URL_CHARSET = "UTF-8";//Para las URL debe ser este juego de caracteres
     public static final String DEBUG_TAG = "Debug-Ejemplo23";
     public int mTotal = 0;
+    public String mCookieId="";
+    public String mCookieValue="";
 
     WebView mResultado = null;
     ProgressDialog mBar = null;
@@ -31,35 +47,34 @@ public class Ejemplo23 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ejemplo23);
+        setContentView(R.layout.activity_ejemplo25);
 
-        mResultado = (WebView) findViewById(R.id.e23_webview);
 
-        final EditText editDominio = (EditText) findViewById(R.id.e23_edit_url);//Dominio y recurso
-        final EditText editParametro = (EditText) findViewById(R.id.e23_edit_param);
-        final EditText editValor = (EditText) findViewById(R.id.e23_edit_valor);
+        mResultado = (WebView) findViewById(R.id.e25_webview);
 
+        final EditText editDominio = (EditText) findViewById(R.id.e25_edit_url);//Dominio y recurso
+        final EditText editParametro = (EditText) findViewById(R.id.e25_edit_param);
+        final EditText editValor = (EditText) findViewById(R.id.e25_edit_valor);
 
         mBar = new ProgressDialog(this);
         mBar.setIndeterminate(false);
         mBar.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 
-        mBar.setTitle(getString(R.string.e23_descargando));
+        mBar.setTitle(getString(R.string.e25_descargando));
 
-        Button descargar = (Button) findViewById(R.id.e23_descargar);
+        Button descargar = (Button) findViewById(R.id.e25_descargar);
         descargar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String dominio = editDominio.getEditableText().toString();
-                String parametro="";
-                String valor="";
+
                 try {
-                    parametro = URLEncoder.encode(editParametro.getEditableText().toString(),URL_CHARSET);
-                    valor = URLEncoder.encode(editValor.getEditableText().toString(),URL_CHARSET);
+                    mCookieId = URLEncoder.encode(editParametro.getEditableText().toString(),URL_CHARSET);
+                    mCookieValue = URLEncoder.encode(editValor.getEditableText().toString(),URL_CHARSET);
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
-                final String urlFinal = URL_SCHEMA + "://" +dominio+"?"+parametro+"="+valor;
+                final String urlFinal = URL_SCHEMA + "://" +dominio;
 
                 mBar.setMessage(urlFinal);
                 mBar.show();
@@ -67,7 +82,7 @@ public class Ejemplo23 extends AppCompatActivity {
                     @Override
                     public void run() {
                         try {
-                            descargaHttp(urlFinal);
+                            descargaHttp(urlFinal,mCookieId,mCookieValue);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
@@ -78,9 +93,27 @@ public class Ejemplo23 extends AppCompatActivity {
     }
 
 
-    private void descargaHttp(String direccion) throws IOException {
+    private void descargaHttp(String direccion,String cookieId,String cookieValue) throws IOException {
         InputStream is = null;
         URL url = new URL(direccion);
+        //Se establece un cookie
+        CookieManager cookieManager = new CookieManager();
+        CookieHandler.setDefault(cookieManager);
+
+        HttpCookie cookie = new HttpCookie(cookieId, cookieValue);
+        cookie.setDomain(url.getHost());
+        cookie.setPath(url.getPath());
+        cookie.setVersion(0);
+
+        try {
+            //Se almacena la cookie
+            cookieManager.getCookieStore().add(
+                    new URI(url.getProtocol()+"://"+url.getHost()), cookie);
+        }catch (URISyntaxException uriex){
+            //No se establece la cookie por estar mal formada la URI
+            Toast.makeText(this,getString(R.string.e25_error_badURI),Toast.LENGTH_LONG).show();
+            return;
+        }
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         try {
             conn.setReadTimeout(2000 /* milisegundos */);
@@ -113,14 +146,20 @@ public class Ejemplo23 extends AppCompatActivity {
             }
             is.close();
         } finally {
-           conn.disconnect();
+            conn.disconnect();
         }
     }
 
     private void autencicaHttp(String direccion) throws IOException {
         InputStream is = null;
+        HttpsURLConnection connHttps=null;
         URL url = new URL(direccion);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        if(HttpsURLConnection.class.isInstance(conn)){
+            connHttps=(HttpsURLConnection)conn;
+            HostnameVerifier h=connHttps.getHostnameVerifier();
+
+        }
         try {
             conn.setReadTimeout(2000 /* milisegundos */);
             conn.setConnectTimeout(15000 /* milisegundos */);

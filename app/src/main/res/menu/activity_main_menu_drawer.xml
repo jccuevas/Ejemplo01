@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/menu_ejemplos_tareas">
+    <item android:title="@string/menu_ejemplos_basico">
         <menu>
             <item
                 android:id="@+id/ejemplo_1"
+                android:icon="@drawable/ic_menu_actividad"
+                android:title="@string/menu_ejemplo_1" />
+            <item
+                android:id="@+id/ejemplo_3"
+                android:icon="@drawable/ic_menu_actividad"
+                android:title="@string/menu_ejemplo_3" />
+
+        </menu>
+    </item>
+    <item android:title="@string/menu_ejemplos_tareas">
+        <menu>
+            <item
+                android:id="@+id/ejemplo_10"
                 android:icon="@drawable/ic_menu_tareas"
                 android:title="@string/menu_ejemplo_1" />
 
@@ -22,11 +35,18 @@
                 android:id="@+id/ejemplo_22"
                 android:icon="@drawable/ic_menu_http"
                 android:title="@string/menu_ejemplo_22" />
-
             <item
                 android:id="@+id/ejemplo_23"
                 android:icon="@drawable/ic_menu_http"
                 android:title="@string/menu_ejemplo_23" />
+            <item
+                android:id="@+id/ejemplo_24"
+                android:icon="@drawable/ic_menu_post"
+                android:title="@string/menu_ejemplo_24" />
+            <item
+                android:id="@+id/ejemplo_25"
+                android:icon="@drawable/ic_menu_cookie"
+                android:title="@string/menu_ejemplo_25" />
         </menu>
     </item>
 </menu>

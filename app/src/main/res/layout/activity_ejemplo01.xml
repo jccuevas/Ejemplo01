@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="libro.ejemplos.MainActivity">
+    tools:context="libro.ejemplos.Ejemplo1">
 
     <TextView
         android:id="@+id/e01_title"
@@ -17,40 +17,6 @@
         android:layout_centerHorizontal="true"
         android:text="@string/main_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large" />
-
-    <Button
-        android:id="@+id/main_connect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:onClick="onConnect"
-        android:text="@string/main_button_connect" />
-    <Button
-        android:id="@+id/main_send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/main_connect"
-        android:layout_alignLeft="@+id/main_connect"
-        android:layout_alignRight="@+id/main_connect"
-        android:layout_alignStart="@+id/main_connect"
-        android:layout_below="@+id/main_connect"
-        android:onClick="onSend"
-        android:text="@string/main_button_send" />
-
-    <TextView
-        android:id="@+id/main_response"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_centerHorizontal="true"
-        android:background="#FFDDDDDD"
-        android:gravity="center_horizontal"
-        android:padding="10dp"
-        android:text="@string/main_server_response"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
         android:id="@+id/e01_edit_name"
@@ -73,11 +39,12 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/e01_button_new"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/e01_edit_pass"
         android:layout_centerHorizontal="true"
         android:onClick="nuevoUsuario"
         android:text="@string/main_nuevo_usuario" />
+
 </RelativeLayout>
