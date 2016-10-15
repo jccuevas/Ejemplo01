@@ -67,7 +67,7 @@ public class MainMenu extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Añadir la navegación entre activdades aquí
         int id = item.getItemId();
 
         if (id == R.id.ejemplo_1) {
@@ -75,6 +75,9 @@ public class MainMenu extends AppCompatActivity
             startActivity(ejempo1);
         } else if (id == R.id.ejemplo_3) {
             Intent ejempo3 = new Intent(this,Ejemplo3.class);
+            startActivity(ejempo3);
+        } else if (id == R.id.ejemplo_9) {
+            Intent ejempo3 = new Intent(this,Ejemplo9.class);
             startActivity(ejempo3);
         } else if (id == R.id.ejemplo_21) {
             Intent ejempo21 = new Intent(this, Ejemplo21.class);

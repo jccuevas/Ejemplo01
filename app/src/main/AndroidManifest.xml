@@ -69,7 +69,10 @@
         <activity android:name=".Ejemplo24" />
         <activity android:name=".Ejemplo25" />
         <activity android:name=".Ejemplo26" />
-        <activity android:name=".Ejemplo3"></activity>
+        <activity android:name=".Ejemplo3" />
+        <activity android:name=".Ejemplo5" />
+        <activity android:name=".Ejemplo9" />
+        <activity android:name=".Ejemplo10"></activity>
     </application>
 
 </manifest>
