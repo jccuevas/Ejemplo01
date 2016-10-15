@@ -71,36 +71,39 @@ public class MainMenu extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.ejemplo_1) {
-            Intent ejempo1 = new Intent(this,Ejemplo1.class);
+            Intent ejempo1 = new Intent(this, Ejemplo1.class);
             startActivity(ejempo1);
         } else if (id == R.id.ejemplo_3) {
-            Intent ejempo3 = new Intent(this,Ejemplo3.class);
+            Intent ejempo3 = new Intent(this, Ejemplo3.class);
             startActivity(ejempo3);
         } else if (id == R.id.ejemplo_9) {
-            Intent ejempo9 = new Intent(this,Ejemplo9.class);
+            Intent ejempo9 = new Intent(this, Ejemplo9.class);
             startActivity(ejempo9);
-
-        }else if (id == R.id.ejemplo_10) {
-            Intent ejempo10 = new Intent(this,Ejemplo10.class);
+        } else if (id == R.id.ejemplo_10) {
+            Intent ejempo10 = new Intent(this, Ejemplo10.class);
             startActivity(ejempo10);
-
         } else if (id == R.id.ejemplo_11) {
-            Intent ejempo11= new Intent(this,Ejemplo11.class);
+            Intent ejempo11 = new Intent(this, Ejemplo11.class);
             startActivity(ejempo11);
-
-        }else if (id == R.id.ejemplo_21) {
+        } else if (id == R.id.ejemplo_12) {
+            Intent ejempo12 = new Intent(this, Ejemplo12.class);
+            startActivity(ejempo12);
+        } else if (id == R.id.ejemplo_14) {
+            Intent ejempo14 = new Intent(this, Ejemplo14.class);
+            startActivity(ejempo14);
+        } else if (id == R.id.ejemplo_21) {
             Intent ejempo21 = new Intent(this, Ejemplo21.class);
             startActivity(ejempo21);
-        }else if (id == R.id.ejemplo_22) {
+        } else if (id == R.id.ejemplo_22) {
             Intent ejempo22 = new Intent(this, Ejemplo22.class);
             startActivity(ejempo22);
-        }else if (id == R.id.ejemplo_23) {
+        } else if (id == R.id.ejemplo_23) {
             Intent ejempo22 = new Intent(this, Ejemplo23.class);
             startActivity(ejempo22);
-        }else if (id == R.id.ejemplo_24) {
+        } else if (id == R.id.ejemplo_24) {
             Intent ejempo22 = new Intent(this, Ejemplo24.class);
             startActivity(ejempo22);
-        }else if (id == R.id.ejemplo_25) {
+        } else if (id == R.id.ejemplo_25) {
             Intent ejempo22 = new Intent(this, Ejemplo25.class);
             startActivity(ejempo22);
         }

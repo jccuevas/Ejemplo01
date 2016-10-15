@@ -33,13 +33,11 @@ public class Ejemplo10 extends AppCompatActivity {
     }
 
     public void onConnect(View view) {
-
-        if (mSocket != null)
-            if (!mSocket.isConnected()) {
+        if (mSocket == null){
                 InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
                 CreaSocket creaSocket = new CreaSocket();
                 creaSocket.execute(direccion);
-            } else
+            } else if(!mSocket.isClosed())
                 try {
                     mSocket.close();
                 } catch (IOException e) {
@@ -47,13 +45,12 @@ public class Ejemplo10 extends AppCompatActivity {
                 }finally {
                     mSocket=null;
                 }
-
         actualizaInterfaz();
     }
 
     public void onSend(View view) {
         if(mSocket!=null)
-            if(mSocket.isConnected()) {
+            if(!mSocket.isClosed()) {
                 Autenticar enviar = new Autenticar();
                 enviar.execute(mSocket);
             }

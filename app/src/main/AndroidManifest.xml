@@ -73,7 +73,9 @@
         <activity android:name=".Ejemplo5" />
         <activity android:name=".Ejemplo9" />
         <activity android:name=".Ejemplo10" />
-        <activity android:name=".Ejemplo11"></activity>
+        <activity android:name=".Ejemplo11" />
+        <activity android:name=".Ejemplo12" />
+        <activity android:name=".Ejemplo14"></activity>
     </application>
 
 </manifest>

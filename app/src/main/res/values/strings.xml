@@ -28,7 +28,7 @@
     <string name="menu_ejemplos_basico">Conceptos básicos</string>
     <string name="menu_ejemplos_tareas">Hebras y Tareas</string>
     <string name="menu_ejemplos_comunicaciones">Comunicaciones</string>
-    <string name="menu_ejemplo_1">Ejemplo 1 y 2</string>
+    <string name="menu_ejemplo_1">Ejemplos 1 y 2</string>
     <string name="menu_ejemplo_3">Ejemplo 3</string>
     <string name="menu_ejemplo_4">Ejemplo 4</string>
     <string name="menu_ejemplo_5">Ejemplo 5</string>
@@ -39,8 +39,7 @@
     <string name="menu_ejemplo_10">Ejemplo 10</string>
     <string name="menu_ejemplo_11">Ejemplo 11</string>
     <string name="menu_ejemplo_12">Ejemplo 12</string>
-    <string name="menu_ejemplo_13">Ejemplo 13</string>
-    <string name="menu_ejemplo_14">Ejemplo 14</string>
+    <string name="menu_ejemplo_14">Ejemplos 13 y 14</string>
     <string name="menu_ejemplo_15">Ejemplo 15</string>
     <string name="menu_ejemplo_16">Ejemplo 16</string>
     <string name="menu_ejemplo_17">Ejemplo 17</string>
@@ -77,6 +76,18 @@
     <string name="e11_button_connect">Conectar</string>
     <string name="e11_button_disconnect">Desconectar</string>
     <string name="e11_button_send">Autenticar</string>
+
+    <string name="e12_title">Ejemplo 12. Cliente TCP basado en hebras con envíos periódicos</string>
+    <string name="e12_server_response">-respuesta del servidor-</string>
+    <string name="e12_button_connect">Conectar</string>
+    <string name="e12_button_disconnect">Desconectar</string>
+    <string name="e12_button_send">Autenticar</string>
+
+    <string name="e14_title">Ejemplo 13 y 14. Cliente TCP basado en hebras que emplea handlers</string>
+    <string name="e14_server_response">-respuesta del servidor-</string>
+    <string name="e14_button_connect">Conectar</string>
+    <string name="e14_button_disconnect">Desconectar</string>
+    <string name="e14_button_send">Autenticar</string>
 
     <string name="e22_url">https://www.android.com</string>
     <string name="e22_descargar">Descargar</string>
