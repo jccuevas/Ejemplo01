@@ -77,9 +77,18 @@ public class MainMenu extends AppCompatActivity
             Intent ejempo3 = new Intent(this,Ejemplo3.class);
             startActivity(ejempo3);
         } else if (id == R.id.ejemplo_9) {
-            Intent ejempo3 = new Intent(this,Ejemplo9.class);
-            startActivity(ejempo3);
-        } else if (id == R.id.ejemplo_21) {
+            Intent ejempo9 = new Intent(this,Ejemplo9.class);
+            startActivity(ejempo9);
+
+        }else if (id == R.id.ejemplo_10) {
+            Intent ejempo10 = new Intent(this,Ejemplo10.class);
+            startActivity(ejempo10);
+
+        } else if (id == R.id.ejemplo_11) {
+            Intent ejempo11= new Intent(this,Ejemplo11.class);
+            startActivity(ejempo11);
+
+        }else if (id == R.id.ejemplo_21) {
             Intent ejempo21 = new Intent(this, Ejemplo21.class);
             startActivity(ejempo21);
         }else if (id == R.id.ejemplo_22) {

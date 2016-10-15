@@ -27,9 +27,37 @@ public class Ejemplo10 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ejemplo10);
 
-        mResponse = (TextView)findViewById(R.id.e10_response);
+        mResponse = (TextView) findViewById(R.id.e10_response);
         mBotonConectar = (Button) findViewById(R.id.e10_connect);
         mBotonEnviar = (Button) findViewById(R.id.e10_send);
+    }
+
+    public void onConnect(View view) {
+
+        if (mSocket != null)
+            if (!mSocket.isConnected()) {
+                InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
+                CreaSocket creaSocket = new CreaSocket();
+                creaSocket.execute(direccion);
+            } else
+                try {
+                    mSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }finally {
+                    mSocket=null;
+                }
+
+        actualizaInterfaz();
+    }
+
+    public void onSend(View view) {
+        if(mSocket!=null)
+            if(mSocket.isConnected()) {
+                Autenticar enviar = new Autenticar();
+                enviar.execute(mSocket);
+            }
+        actualizaInterfaz();
     }
 
     private void actualizaInterfaz() {

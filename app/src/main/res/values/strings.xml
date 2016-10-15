@@ -72,6 +72,12 @@
     <string name="e10_button_disconnect">Desconectar</string>
     <string name="e10_button_send">Autenticar</string>
 
+    <string name="e11_title">Ejemplo 11. Cliente TCP basado en hebras</string>
+    <string name="e11_server_response">-respuesta del servidor-</string>
+    <string name="e11_button_connect">Conectar</string>
+    <string name="e11_button_disconnect">Desconectar</string>
+    <string name="e11_button_send">Autenticar</string>
+
     <string name="e22_url">https://www.android.com</string>
     <string name="e22_descargar">Descargar</string>
     <string name="e22_description">Ejemplo de descarga de un recurso con HTTP</string>

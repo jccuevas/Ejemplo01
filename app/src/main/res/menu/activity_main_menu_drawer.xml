@@ -23,6 +23,14 @@
                 android:id="@+id/ejemplo_10"
                 android:icon="@drawable/ic_menu_tareas"
                 android:title="@string/menu_ejemplo_10" />
+            <item
+                android:id="@+id/ejemplo_11"
+                android:icon="@drawable/ic_menu_tareas"
+                android:title="@string/menu_ejemplo_11" />
+            <item
+                android:id="@+id/ejemplo_12"
+                android:icon="@drawable/ic_menu_tareas"
+                android:title="@string/menu_ejemplo_12" />
 
         </menu>
     </item>

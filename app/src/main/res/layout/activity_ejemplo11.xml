@@ -7,29 +7,30 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="libro.ejemplos.Ejemplo9">
+    tools:context="libro.ejemplos.Ejemplo11">
 
     <TextView
-        android:id="@+id/e09_title"
+        android:id="@+id/e11_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/e09_title"
+        android:gravity="center_horizontal"
+        android:text="@string/e11_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <Button
-        android:id="@+id/e09_connect"
+        android:id="@+id/e11_connect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/e09_title"
+        android:layout_below="@+id/e11_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:onClick="onConnect"
-        android:text="@string/e09_button_connect" />
+        android:text="@string/e11_button_connect" />
 
     <TextView
-        android:id="@+id/e09_response"
+        android:id="@+id/e11_response"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -37,7 +38,7 @@
         android:background="#FFDDDDDD"
         android:gravity="center_horizontal"
         android:padding="10dp"
-        android:text="@string/e09_server_response"
+        android:text="@string/e11_server_response"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
