@@ -14,10 +14,9 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-public class Ejemplo9 extends AppCompatActivity {
+public class Ejemplo9 extends AppCompatActivity implements NetworkInterface{
     TextView mResponse = null;
-    private String mIp = "192.168.1.155";
-    private int mPuerto = 6000;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -19,7 +19,6 @@ public class ServicioConectar extends Service {
     public static final String EXTRA_PORT = "servicio_puerto";
     protected String mIp = "192.158.1.157";
     protected int mPuerto = 6000;
-    private NotificationManager mNM;
     private int mId = 1;
 
     public ServicioConectar() {
@@ -35,7 +34,6 @@ public class ServicioConectar extends Service {
         super.onStartCommand(intent, flags, startId);
         mId=startId; //Se guarda el identificador para poder parar el servicio
                      // si fuera necesario
-
         Toast.makeText(this,getString(R.string.nuevo_servicio), Toast.LENGTH_SHORT).show();
 
         if (intent != null) {
@@ -108,7 +106,6 @@ public class ServicioConectar extends Service {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
                 }
                 os.write(new String("QUIT\r\n").getBytes());
                 os.flush();
@@ -125,11 +122,8 @@ public class ServicioConectar extends Service {
                 e.printStackTrace();
                 mRespuesta = "IOException: " + e.toString();
             } finally {
-                //stopForeground(true);
-                Toast.makeText(getApplicationContext(),"Parando",Toast.LENGTH_LONG).show();
                 stopSelf(mId);
             }
-
         }
     }
 }

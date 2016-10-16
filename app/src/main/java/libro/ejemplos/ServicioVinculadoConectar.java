@@ -85,7 +85,6 @@ public class ServicioVinculadoConectar extends Service {
     public boolean enviar(String datos) {
         String respuesta = "";
         try {
-
             if (mCliente.isClosed()) {
                 //Se leen los datos del buffer de entrada
                 BufferedReader bis = new BufferedReader(new InputStreamReader(mCliente.getInputStream()));
@@ -164,10 +163,7 @@ public class ServicioVinculadoConectar extends Service {
                 e.printStackTrace();
                 Log.e("SVinculadoConectar", "IOException: " + e.toString());
             }
-
         }
-
-
     }
 
     /**

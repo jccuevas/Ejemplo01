@@ -124,7 +124,7 @@ public class IntentServiceConectar extends IntentService {
         // Si se quiere que se inicie la actividad cuando se toque en
         // la notificación se crea un PendingIntent
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, MainActivity.class), 0);
+                new Intent(this, EjemplosServicios.class), 0);
 
         // Preparar la información a mostrar en el panel de notificaciones.
         NotificationCompat.Builder notificacion =

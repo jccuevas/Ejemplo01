@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="libro.ejemplos.EjemplosServicios">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/eServicios_title15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/e15_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    <Button
+        android:id="@+id/eServicios_ejemplo15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onEjemplo15"
+        android:text="@string/e15_button_connect" />
+
+
+    <TextView
+        android:id="@+id/eServicios_title16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/e16_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:id="@+id/eServicios_ejemplo16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onEjemplo16"
+        android:text="@string/e16_button_connect" />
+    <TextView
+        android:id="@+id/eServicios_title17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/e17_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:id="@+id/eServicios_ejemplo17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onEjemplo17"
+        android:text="@string/e17_button_connect" />
+    <TextView
+        android:id="@+id/eServicios_title18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/e18_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    <Button
+        android:id="@+id/eServicios_ejemplo18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onEjemplo18"
+        android:text="@string/e18_button_connect" />
+
+</LinearLayout>
+</ScrollView>

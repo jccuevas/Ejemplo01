@@ -14,12 +14,11 @@ import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-public class Ejemplo10 extends AppCompatActivity {
+public class Ejemplo10 extends AppCompatActivity implements NetworkInterface{
     TextView mResponse = null;
     Button mBotonConectar = null;
     Button mBotonEnviar = null;
-    private String mIp = "192.168.1.155";
-    private int mPuerto = 6000;
+
     private Socket mSocket = null;
 
     @Override

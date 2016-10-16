@@ -27,6 +27,7 @@
 
     <string name="menu_ejemplos_basico">Conceptos básicos</string>
     <string name="menu_ejemplos_tareas">Hebras y Tareas</string>
+    <string name="menu_ejemplos_servicios">Servicios</string>
     <string name="menu_ejemplos_comunicaciones">Comunicaciones</string>
     <string name="menu_ejemplo_1">Ejemplos 1 y 2</string>
     <string name="menu_ejemplo_3">Ejemplo 3</string>
@@ -40,6 +41,7 @@
     <string name="menu_ejemplo_11">Ejemplo 11</string>
     <string name="menu_ejemplo_12">Ejemplo 12</string>
     <string name="menu_ejemplo_14">Ejemplos 13 y 14</string>
+    <string name="menu_ejemplos_15_18">Servicios iniciados</string>
     <string name="menu_ejemplo_15">Ejemplo 15</string>
     <string name="menu_ejemplo_16">Ejemplo 16</string>
     <string name="menu_ejemplo_17">Ejemplo 17</string>
@@ -88,6 +90,30 @@
     <string name="e14_button_connect">Conectar</string>
     <string name="e14_button_disconnect">Desconectar</string>
     <string name="e14_button_send">Autenticar</string>
+
+    <string name="e15_title">Ejemplo 15. Servicio sencillo para cliente TCP</string>
+    <string name="e15_button_connect">Iniciar</string>
+
+    <string name="e16_title">Ejemplo 16. Servicio sencillo para cliente TCP con notificaciones</string>
+    <string name="e16_button_connect">Iniciar</string>
+
+    <string name="e17_title">Ejemplo 17. Ejemplo de un servicio en primer plano</string>
+    <string name="e17_button_connect">Iniciar</string>
+
+    <string name="e18_title">Ejemplo 18. Ejemplo de un IntentService que realiza la tarea de conexión y envío de mensajes a un servidor</string>
+    <string name="e18_button_connect">Iniciar</string>
+
+    <string name="e19_title">Ejemplo 19. Ejemplo de un servicio vinculado en una actividad</string>
+    <string name="e19_server_response">-respuesta del servidor-</string>
+    <string name="e19_button_connect">Conectar</string>
+    <string name="e19_button_disconnect">Desconectar</string>
+    <string name="e19_button_send">Autenticar</string>
+
+    <string name="e20_title">Ejemplo 20. Ejemplo de un servicio vinculado con una hebra de trabajo que se comunica a través de handlers</string>
+    <string name="e20_server_response">-respuesta del servidor-</string>
+    <string name="e20_button_connect">Conectar</string>
+    <string name="e20_button_disconnect">Desconectar</string>
+    <string name="e20_button_send">Autenticar</string>
 
     <string name="e22_url">https://www.android.com</string>
     <string name="e22_descargar">Descargar</string>

@@ -49,7 +49,7 @@ public class ServicioPrimerPlano extends Service {
 
             // El PendingIntent a lanzar si el usuario pulsa en la notificación
             PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                    new Intent(this, MainActivity.class), 0);
+                    new Intent(this, EjemplosServicios.class), 0);
 
             NotificationCompat.Builder notificacion =
                     new NotificationCompat.Builder(this)
@@ -70,7 +70,7 @@ public class ServicioPrimerPlano extends Service {
         // Si se quiere que se inicie la actividad cuando se toque en
         // la notificación se crea un PendingIntent
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, MainActivity.class), 0);
+                new Intent(this, EjemplosServicios.class), 0);
 
         // Preparar la información a mostrar en el panel de notificaciones.
         NotificationCompat.Builder notificacion =

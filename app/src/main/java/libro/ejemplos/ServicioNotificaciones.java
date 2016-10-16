@@ -46,20 +46,6 @@ public class ServicioNotificaciones extends Service {
 
             mPuerto = intent.getIntExtra(EXTRA_PORT, mPuerto);
             InetSocketAddress direccion = new InetSocketAddress(mIp, mPuerto);
-
-            // The PendingIntent to launch our activity if the user selects this notification
-//            PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-//                    new Intent(this, MainActivity.class), 0);
-//
-//            NotificationCompat.Builder notificacion =
-//                    new NotificationCompat.Builder(this)
-//                            .setSmallIcon(R.drawable.ic_stat_communication)
-//                            .setContentTitle(getText(R.string.servicio_etiqueta))
-//                            .setContentText("Conectando con " + mIp + ":" + mPuerto)// the contents of the entry
-//                            .setContentIntent(contentIntent);
-//
-//            startForeground(mId, notificacion.build());
-
             new Thread(new HebraConectarSimple(direccion)).start();
         }
         return START_STICKY;
@@ -70,7 +56,7 @@ public class ServicioNotificaciones extends Service {
         // Si se quiere que se inicie la actividad cuando se toque en
         // la notificación se crea un PendingIntent
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, MainActivity.class), 0);
+                new Intent(this, EjemplosServicios.class), 0);
 
         // Preparar la información a mostrar en el panel de notificaciones.
         NotificationCompat.Builder notificacion =

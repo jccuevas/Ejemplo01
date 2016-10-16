@@ -16,8 +16,8 @@ import java.net.UnknownHostException;
 public class Ejemplo12 extends AppCompatActivity {
 
     TextView mResponse = null;
-    private String mIp = "192.168.1.155";
-    private int mPuerto = 6000;
+    private String mIp = NetworkInterface.mIp;
+    private int mPuerto = NetworkInterface.mPuerto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,12 +17,12 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class Ejemplo14 extends AppCompatActivity {
+public class Ejemplo14 extends AppCompatActivity{
 
     private static Handler mHandler = null;
     TextView mResponse = null;
-    private String mIp = "192.168.1.155";
-    private int mPuerto = 6000;
+    private String mIp = NetworkInterface.mIp;
+    private int mPuerto = NetworkInterface.mPuerto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

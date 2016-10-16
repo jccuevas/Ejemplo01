@@ -19,8 +19,8 @@ public class NuevoUsuarioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_nuevo_usuario);
 
         Intent intent = getIntent();
-        String nombre = intent.getStringExtra(MainActivity.EXTRA_NOMBRE);
-        String clave  = intent.getStringExtra(MainActivity.EXTRA_CLAVE);
+        String nombre = intent.getStringExtra(Ejemplo3.EXTRA_NOMBRE);
+        String clave  = intent.getStringExtra(Ejemplo3.EXTRA_CLAVE);
 
         TextView saludo = (TextView)findViewById(R.id.nuevo_usuario_saludo);
         saludo.setText("Bienvenido "+nombre+" clave="+clave+" Nombre guardado="+usuario.getNombre());
@@ -31,7 +31,7 @@ public class NuevoUsuarioActivity extends AppCompatActivity {
 
         Random r = new Random();
         Intent data = new Intent();
-        data.putExtra(MainActivity.EXTRA_SESION, "idsesion"+r.nextInt(1000));
+        data.putExtra(Ejemplo3.EXTRA_SESION, "idsesion"+r.nextInt(1000));
         setResult(RESULT_OK, data);
         finish();
 

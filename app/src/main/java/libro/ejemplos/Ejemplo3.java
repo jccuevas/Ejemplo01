@@ -11,6 +11,7 @@ public class Ejemplo3 extends AppCompatActivity {
 
     public static final String EXTRA_NOMBRE = "nombre";
     public static final String EXTRA_CLAVE = "clave";
+    public static final String EXTRA_SESION = "sesion";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +37,7 @@ public class Ejemplo3 extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1)//Actividad NuevoUsuarioActivity
             if (resultCode == RESULT_OK) {
-                String sesion = data.getStringExtra(MainActivity.EXTRA_SESION);
+                String sesion = data.getStringExtra(Ejemplo3.EXTRA_SESION);
                 Toast.makeText(this, "Nueva sesión: " + sesion, Toast.LENGTH_LONG).show();
             }
         if (resultCode == RESULT_CANCELED) {

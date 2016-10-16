@@ -2,9 +2,6 @@ package libro.ejemplos;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -91,7 +88,16 @@ public class MainMenu extends AppCompatActivity
         } else if (id == R.id.ejemplo_14) {
             Intent ejempo14 = new Intent(this, Ejemplo14.class);
             startActivity(ejempo14);
-        } else if (id == R.id.ejemplo_21) {
+        }else if (id == R.id.ejemplo_ser) {
+            Intent ejempoSer = new Intent(this, EjemplosServicios.class);
+            startActivity(ejempoSer);
+        } else if (id == R.id.ejemplo_19) {
+            Intent ejempo19 = new Intent(this, Ejemplo19.class);
+            startActivity(ejempo19);
+        }else if (id == R.id.ejemplo_20) {
+            Intent ejempo20 = new Intent(this, Ejemplo20.class);
+            startActivity(ejempo20);
+        }else if (id == R.id.ejemplo_21) {
             Intent ejempo21 = new Intent(this, Ejemplo21.class);
             startActivity(ejempo21);
         } else if (id == R.id.ejemplo_22) {

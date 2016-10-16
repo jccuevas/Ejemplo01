@@ -38,7 +38,23 @@
 
         </menu>
     </item>
+    <item android:title="@string/menu_ejemplos_servicios">
+        <menu>
+            <item
+                android:id="@+id/ejemplo_ser"
+                android:icon="@drawable/ic_menu_servicios"
+                android:title="@string/menu_ejemplos_15_18" />
+            <item
+                android:id="@+id/ejemplo_19"
+                android:icon="@drawable/ic_menu_servicios"
+                android:title="@string/menu_ejemplo_19" />
+            <item
+                android:id="@+id/ejemplo_20"
+                android:icon="@drawable/ic_menu_servicios"
+                android:title="@string/menu_ejemplo_20" />
 
+        </menu>
+    </item>
 
     <item android:title="@string/menu_ejemplos_comunicaciones">
         <menu>
