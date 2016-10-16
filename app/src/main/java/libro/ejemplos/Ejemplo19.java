@@ -3,25 +3,26 @@ package libro.ejemplos;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Handler;
 import android.os.IBinder;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
-public class Ejemplo19 extends AppCompatActivity {
+public class Ejemplo19 extends AppCompatActivity implements NetworkInterface {
 
-    private Socket mSocket = null;
-    private String mIp = "192.168.1.162";
-    private int mPuerto = 6000;
-
+    TextView mResponse = null;
     private ServicioVinculadoSimple mServicio = null;
     private boolean mVinculado = false;
     /**
-     * Define las llamadas para a vinculación del servicio pasado en
-     * bindService()
+     * Define las llamadas para a vinculación del servicio pasado en bindService()
      */
     private ServiceConnection mConexion = new ServiceConnection() {
 
@@ -29,9 +30,9 @@ public class Ejemplo19 extends AppCompatActivity {
         public void onServiceConnected(ComponentName className,
                                        IBinder service) {
             // Para obtener la instancia al Binder del servicio basta con poner un casting
-            ServicioVinculadoSimple.SocketBinder binder =
-                    (ServicioVinculadoSimple.SocketBinder) service;
+            ServicioVinculadoSimple.SocketBinder binder = (ServicioVinculadoSimple.SocketBinder) service;
             mServicio = binder.getService();
+
             //Se emplea para comprobar si el servicio está vinculado o no
             mVinculado = true;
         }
@@ -48,7 +49,6 @@ public class Ejemplo19 extends AppCompatActivity {
     }
 
     public void onConnect(View view) {
-
         if (mVinculado) {
             //Se invoca el método conectar del servicio
             mServicio.conectar(new InetSocketAddress(mIp, mPuerto));
@@ -72,4 +72,5 @@ public class Ejemplo19 extends AppCompatActivity {
             mVinculado = false;
         }
     }
+
 }

@@ -41,6 +41,10 @@
             android:name=".IntentServiceConectar"
             android:exported="false" />
         <service
+            android:name=".ServicioVinculadoSimple"
+            android:enabled="true"
+            android:exported="false" />
+        <service
             android:name=".ServicioVinculadoConectar"
             android:enabled="true"
             android:exported="false" />
@@ -78,7 +82,7 @@
         <activity android:name=".EjemplosServicios" />
         <activity android:name=".EjemplosServiciosVinculados" />
         <activity android:name=".Ejemplo19" />
-        <activity android:name=".Ejemplo20"></activity>
+        <activity android:name=".Ejemplo20"/>
     </application>
 
 </manifest>
