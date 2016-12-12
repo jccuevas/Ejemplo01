@@ -28,5 +28,6 @@ http://www.altariaeditorial.com
 
 ## Ejemplos
 
-* Ejemplo 1. Creación de una nueva actividad y paso de parámetros
+* Ejemplo 1. Creación de una nueva actividad y paso de parámetros.
+* Ejemplo 3. Creación de una nueva actividad para obtener un resultado.
 
