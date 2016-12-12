@@ -1,4 +1,4 @@
-# Ejemplo01
+# Ejemplos-Libro-Prog.-Ap.-de-Red
 Ejemplos del libro "Programación de aplicaciones de red. Protocolos de Internet cliente-servidor"
 
 © Juan Carlos Cuevas Martínez
@@ -25,4 +25,6 @@ C/ Enric d’Ossó, 2
 email: info@altariaeditorial.com
 
 http://www.altariaeditorial.com
+
+## Ejemplos
 
