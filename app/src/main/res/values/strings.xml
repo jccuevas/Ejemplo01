@@ -55,10 +55,7 @@
     <string name="menu_ejemplo_25">Ejemplo 25 - Cookies</string>
 
 
-    <string name="e21_url">ftp://ftp.ujaen.es/welcome.msg</string>
-    <string name="e21_descargar">Descargar</string>
-    <string name="e21_description">Ejemplo de descarga de un recurso con FTP</string>
-    <string name="e21_descargando">Descargando...</string>
+
     <string name="main_label_author">Autor</string>
 
 
@@ -114,6 +111,11 @@
     <string name="e20_button_connect">Conectar</string>
     <string name="e20_button_disconnect">Desconectar</string>
     <string name="e20_button_send">Autenticar</string>
+
+    <string name="e21_url">ftp://ftp.ujaen.es/welcome.msg</string>
+    <string name="e21_descargar">Descargar</string>
+    <string name="e21_description">Ejemplo de descarga de un recurso con FTP</string>
+    <string name="e21_descargando">Descargando...</string>
 
     <string name="e22_url">https://www.android.com</string>
     <string name="e22_descargar">Descargar</string>
